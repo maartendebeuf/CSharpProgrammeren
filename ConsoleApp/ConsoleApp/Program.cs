@@ -10,9 +10,11 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Geef een geheel getal in: ");
-            int getal = int.Parse(Console.ReadLine());
-            Console.WriteLine("Je gaf het getal " + getal + " in ;)");
+            // Vraag een kommagetal aan en converteer dit naar een geheel getal
+
+            Console.WriteLine("Geef een kommagetal in: ");
+            double kommagetal = double.Parse(Console.ReadLine());            
+            Console.WriteLine("Je gaf het getal " + kommagetal + " in ;)");
             Console.ReadKey();
         }
     }
