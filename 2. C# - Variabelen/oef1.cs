@@ -1,0 +1,1 @@
+Console.WriteLine("Geef een getal in: ");
