@@ -3,5 +3,5 @@
             Console.WriteLine("Geef een woord in: ");
             string woord = Console.ReadLine();
             int count = woord.Count();
-            Console.WriteLine("de lengte van het ingegeven woord is: " + count);
+            Console.WriteLine("Het ingegeven woord is " + count + " letters lang");
             Console.ReadKey();

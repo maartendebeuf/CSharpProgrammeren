@@ -2,5 +2,5 @@
 
             Console.WriteLine("Geef een woord in: ");
             string woord = Console.ReadLine();
-            Console.Write(".ToLower: " + woord.ToLower());
+            Console.Write("Het woord in kleine letters = " + woord.ToLower());
             Console.ReadKey();
