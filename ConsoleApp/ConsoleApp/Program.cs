@@ -10,11 +10,11 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            // Vraag een kommagetal aan en converteer dit naar een geheel getal
+            // Schrijf een programma dat een tekst naar enkel kleine letters omzet.
 
-            Console.WriteLine("Geef een kommagetal in: ");
-            double kommagetal = double.Parse(Console.ReadLine());            
-            Console.WriteLine("Je gaf het getal " + kommagetal + " in ;)");
+            Console.WriteLine("Geef een woord in: ");
+            string woord = Console.ReadLine();
+            Console.Write(".ToLower: " + woord.ToLower());
             Console.ReadKey();
         }
     }
