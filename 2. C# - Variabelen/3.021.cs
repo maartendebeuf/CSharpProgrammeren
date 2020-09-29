@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // Schrijf een programma dat de huidige tijd weergeeft in de console.
+// Schrijf een programma dat twee strings vergelijkt.
 
             Console.WriteLine("Geef een woord in: ");
             string woord1 = Console.ReadLine();
@@ -26,6 +13,3 @@ namespace ConsoleApp
                 Console.WriteLine("het eerste woord is niet gelijk aan het tweede.");
             }      
             Console.ReadKey();
-        }
-    }
-}
