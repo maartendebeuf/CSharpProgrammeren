@@ -11,15 +11,11 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            // Schrijf een programma dat een `DateTime` vraagt aan de gebruiker en daarbij X dagen bijtelt. Toon het resultaat aan de gebruiker.
+            // Wat is het resultaat van volgende beweringen ?
+            //1. `true && true` //true 
+            bool uitkomst = true && true;
+            Console.WriteLine(uitkomst.ToString());
 
-            Console.WriteLine("Geef een datum in: (xx/xx/xxxx)");
-            DateTime dateTime = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("aantal dagen vooruit: ");
-            int dagenVooruit = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("De uitgekomen datum is: " + (dateTime.AddDays(dagenVooruit)));
-            
             Console.ReadKey();
         }
     }

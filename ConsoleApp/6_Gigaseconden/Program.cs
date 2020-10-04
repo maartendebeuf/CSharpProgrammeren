@@ -21,13 +21,8 @@ namespace _6_Gigaseconden
             int uren = newDateTime.Hour;
             int minuten = newDateTime.Minute;
             int seconden = newDateTime.Second;
-            Console.WriteLine(gigaseconden + "gigaseconden=");
-            Console.WriteLine(jaar + "jaar");
-            Console.WriteLine(maand + "maand=");
-            Console.WriteLine(dagen + "dagen=");
-            Console.WriteLine(uren + "uren=");
-            Console.WriteLine(minuten + "minuten=");
-            Console.WriteLine(seconden + "seconden=");
+            Console.WriteLine("Iemand dat " + gigaseconden + " gigaseconden leeft is:");
+            Console.WriteLine(jaar + " jaar, " + maand + " maand, " + dagen + " dagen, " + uren + " uren, " + minuten + " minuten, " + seconden + " seconden oud");
             Console.ReadLine();
 
         }

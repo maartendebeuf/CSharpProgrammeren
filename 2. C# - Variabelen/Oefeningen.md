@@ -40,13 +40,13 @@ Wat is het resultaat van volgende beweringen?
 9. `"test" == "testing"`//false
 10. `1 != 0 && 2 == 1` //false
 11. `"test" != "testing"` //true
-12. `"test" == 1` //false
+12. `"test" == 1` //foutmelding == cannot be applied to operands of type 'string' and 'int'
 13. `!(true && false)` //true
-14. `!(1 == 1 && 0 != 1)` //true
+14. `!(1 == 1 && 0 != 1)` //false
 15. `!(10 == 1 || 1000 == 1000)` //false
 16. `!(1 != 10 || 3 == 4)` //false
-17. `!("testing" == "testing" && "A" == "B")` //false
-18. `1 == 1 && !("testing" == 1 || 1 == 0)` //true
+17. `!("testing" == "testing" && "A" == "B")` //true
+18. `1 == 1 && !("testing" == 1 || 1 == 0)` //foutmelding == cannot be applied to operands of type 'string' and 'int'
 19. `"meat" == "bacon" && !(3 == 4 || 3 == 3)` //false
 20. `3 == 3 && !("testing" == "testing" || "C#" == "Fun")` //false
 

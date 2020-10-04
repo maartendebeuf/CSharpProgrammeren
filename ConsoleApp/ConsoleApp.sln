@@ -15,9 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_Som", "4_Som\4_Som.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_Som", "5_Som\5_Som.csproj", "{292FE89A-8118-46FF-8895-3FF4D5B2542B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_TrueOrFalse", "5_TrueOrFalse\5_TrueOrFalse.csproj", "{1189161E-80CE-4314-BB32-9431ABF378BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_TrueOrFalse", "5_TrueOrFalse\6_TrueOrFalse.csproj", "{1189161E-80CE-4314-BB32-9431ABF378BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_Gigaseconden", "6_Gigaseconden\6_Gigaseconden.csproj", "{A4C50566-73D5-426E-A7E7-CEB82EA9EEE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_Gigaseconden", "6_Gigaseconden\7_Gigaseconden.csproj", "{A4C50566-73D5-426E-A7E7-CEB82EA9EEE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8_Schrikkeljaar", "8_Schrikkeljaar\8_Schrikkeljaar.csproj", "{4DB30480-F1E4-4B01-A8BC-5C3E7B1D18FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{A4C50566-73D5-426E-A7E7-CEB82EA9EEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4C50566-73D5-426E-A7E7-CEB82EA9EEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4C50566-73D5-426E-A7E7-CEB82EA9EEE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB30480-F1E4-4B01-A8BC-5C3E7B1D18FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB30480-F1E4-4B01-A8BC-5C3E7B1D18FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB30480-F1E4-4B01-A8BC-5C3E7B1D18FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB30480-F1E4-4B01-A8BC-5C3E7B1D18FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
