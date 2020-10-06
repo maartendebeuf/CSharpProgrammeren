@@ -1,0 +1,23 @@
+﻿<Window x:Class="Datum.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Datum"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="297.5" Width="261.123">
+    <Grid Margin="0,0,2,0">
+        <Button x:Name="btnVandaag" Content="Vandaag" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="btnVandaag_Click"/>
+        <Button x:Name="btnJaar" Content="Jaar" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="75" Click="btnJaar_Click"/>
+        <Button x:Name="btnNummer" Content="Nummer" HorizontalAlignment="Left" Margin="90,35,0,0" VerticalAlignment="Top" Width="75" Click="btnNummer_Click"/>
+        <Button x:Name="btnWeekdag" Content="Weekdag" HorizontalAlignment="Left" Margin="170,35,0,0" VerticalAlignment="Top" Width="75" Click="btnWeekdag_Click"/>
+        <Button x:Name="btnNaam" Content="Naam" HorizontalAlignment="Left" Margin="90,60,0,0" VerticalAlignment="Top" Width="75" Click="btnNaam_Click"/>
+        <Button x:Name="btnAfkorting" Content="Afkorting" HorizontalAlignment="Left" Margin="90,85,0,0" VerticalAlignment="Top" Width="75" Click="btnAfkorting_Click"/>
+        <Label x:Name="label1" Content="Maand" HorizontalAlignment="Center" Margin="90,7,86,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.54,0.5" HorizontalContentAlignment="Center"/>
+        <Label x:Name="label2" Content="Geboren op" HorizontalAlignment="Center" Margin="10,110,166,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right"/>
+        <DatePicker x:Name="dateTimePickerGeboortedatum" HorizontalAlignment="Left" Margin="90,112,0,0" VerticalAlignment="Top" Width="155" FirstDayOfWeek="Monday"/>
+        <Label x:Name="lblOutput" Content="Label" HorizontalAlignment="Left" Margin="10,166,0,10" Width="235" Background="#FFDEDCDC"/>
+        <Button x:Name="btnLeeftijd" Content="Leeftijd" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,141,0,0" Click="btnLeeftijd_Click"/>
+
+    </Grid>
+</Window>
