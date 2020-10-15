@@ -32,21 +32,25 @@ Schrijf alle antwoorden op de vetgedrukte tekst in een markdown bestand en uploa
    **Wat zie je?**  
    
    **visual studio geeft weer welke vorm hij aan het initialisetren is**
+   
    Kijk nu ook eens in de *Autos* en *Locals windows*.  
    **Wat zie je daar? Kan je het verschil uitleggen tussen beide windows?**
    
    **nee**
+   
 11. Bekijk het *Callstack window*.  
    **Wat zie je daar? Kan je dit in eigen woorden uitleggen?**
    
    **nee**
+   
 12.  Plaats een breakpoint op lijn 25 (`base.Draw()`). Navigeer met *Step Into (F11)* tot je aan lijn 16 komt, net na `Console.WriteLine("Performing base class drawing tasks")`.  
    **Wat is de console output tot dit punt?**
    
    **Drawing a rectangle
    **Performing base class drawing tasks
    **Drawing a trangle
-   **Performing base class drawing tasks  
+   **Performing base class drawing tasks
+   
 Sleep nu de *gele pijl*, deze pijl toont waar je debugsessie momenteel gepauzeerd staat, één lijn omhoog tot op `Console.WriteLine("Performing base class drawing tasks")`. Navigeer opnieuw via *Step Into* een lijn verder.  
 ![Breakpoint arrow](../_other/images/breakpointarrow.png)  
 **Bekijk opnieuw de console output. Kan je beschrijven wat er is gebeurd?**
