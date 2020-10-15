@@ -9,10 +9,12 @@ Schrijf alle antwoorden op de vetgedrukte tekst in een markdown bestand en uploa
    **Beschrijf kort wat je denkt dat het project bevat en doet.**
    
    **een console applicatie om denkbeeldig vormen te tekenen**
+   
 3. Start de debugger in Visual Studio (VS)  
    **Wat is de console output?**
    
    **elke vorm is denkbeeldig getekend**
+   
 4. Stop de debugger
 5. Open het bestand `Program.cs` in VS en plaats een *breakpoint* op lijn 63 (`shape.Draw()`)
 6. Navigeer via volgende manieren door de code. Herstart de debugger eens tussen beide manieren (Restart knop, Ctrl+Shift+F5) indien de applicatie niet wordt afgesloten.  
@@ -23,7 +25,8 @@ Schrijf alle antwoorden op de vetgedrukte tekst in een markdown bestand en uploa
 ![Run to click](../_other/images/runtoclick.png)  
    **Beschrijf kort wat er gebeurt.**
    
-   **visual studio gaat door tot hij aan deze lijn komt
+   **visual studio gaat door tot hij aan deze lijn komt**
+   
 8. Pauzeer opnieuw je debugsessie op lijn 44. Verbeter nu de typefout (trangle -> tr**i**angle) tijdens je debugsessie. Navigeer een lijn verder (Step Into).  
    **Bekijk de console output. Wat zie je?**
    
