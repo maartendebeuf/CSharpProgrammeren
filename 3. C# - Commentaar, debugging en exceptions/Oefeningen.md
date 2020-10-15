@@ -11,6 +11,7 @@ Schrijf alle antwoorden op de vetgedrukte tekst in een markdown bestand en uploa
    **een console applicatie om denkbeeldig vormen te tekenen**
 3. Start de debugger in Visual Studio (VS)  
    **Wat is de console output?**
+   
    **elke vorm is denkbeeldig getekend**
 4. Stop de debugger
 5. Open het bestand `Program.cs` in VS en plaats een *breakpoint* op lijn 63 (`shape.Draw()`)
@@ -21,21 +22,27 @@ Schrijf alle antwoorden op de vetgedrukte tekst in een markdown bestand en uploa
 7. Herstart de debugger en wacht tot je breakpoint geactiveerd is. Scroll daarna naar lijn 44 (` Console.WriteLine("Drawing a trangle");`) en hover over de lijn. Je ziet links een nieuwe knop tevoorschijn komen **(Run to click)**. Klik er op.    Alternatieve manier: Ctrl+F10 of rechtermuisknop -> run to cursor.  
 ![Run to click](../_other/images/runtoclick.png)  
    **Beschrijf kort wat er gebeurt.**
+   
    **visual studio gaat door tot hij aan deze lijn komt
 8. Pauzeer opnieuw je debugsessie op lijn 44. Verbeter nu de typefout (trangle -> tr**i**angle) tijdens je debugsessie. Navigeer een lijn verder (Step Into).  
    **Bekijk de console output. Wat zie je?**
+   
    **de string is aangepast tijdens het debuggen.**
 9.  Activeer je breakpoint op lijn 63 opnieuw en hover over het woord *`shapes`*.  
    **Wat zie je?**  
+   
    **visual studio geeft weer welke vorm hij aan het initialisetren is**
    Kijk nu ook eens in de *Autos* en *Locals windows*.  
    **Wat zie je daar? Kan je het verschil uitleggen tussen beide windows?**
+   
    **nee**
 11. Bekijk het *Callstack window*.  
    **Wat zie je daar? Kan je dit in eigen woorden uitleggen?**
+   
    **nee**
 12.  Plaats een breakpoint op lijn 25 (`base.Draw()`). Navigeer met *Step Into (F11)* tot je aan lijn 16 komt, net na `Console.WriteLine("Performing base class drawing tasks")`.  
    **Wat is de console output tot dit punt?**
+   
    **Drawing a rectangle
    **Performing base class drawing tasks
    **Drawing a trangle
