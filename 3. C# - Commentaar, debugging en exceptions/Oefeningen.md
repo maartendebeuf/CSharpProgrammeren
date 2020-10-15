@@ -7,6 +7,7 @@ Schrijf alle antwoorden op de vetgedrukte tekst in een markdown bestand en uploa
 1. Clone de C# repository van GitHub en kopieer het *Debugging project*  naar je eigen Git folder
 2. Open het project  
    **Beschrijf kort wat je denkt dat het project bevat en doet.**
+   
    **een console applicatie om denkbeeldig vormen te tekenen**
 3. Start de debugger in Visual Studio (VS)  
    **Wat is de console output?**
