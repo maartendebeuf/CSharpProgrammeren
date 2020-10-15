@@ -40,12 +40,12 @@ Schrijf alle antwoorden op de vetgedrukte tekst in een markdown bestand en uploa
    Kijk nu ook eens in de *Autos* en *Locals windows*.  
    **Wat zie je daar? Kan je het verschil uitleggen tussen beide windows?**
    
-   **nee**
+   **auto's: kijkt naar de waardes rond het breakpoint, locals: kijkt binnen de scope waar de breakpoint in staat naar de waardes**
    
 11. Bekijk het *Callstack window*.  
    **Wat zie je daar? Kan je dit in eigen woorden uitleggen?**
    
-   **op welke lijn visual studio de code aan het uitvoeren is**
+   **welke methode en op welke lijn visual studio de code aan het uitvoeren is**
    
 12.  Plaats een breakpoint op lijn 25 (`base.Draw()`). Navigeer met *Step Into (F11)* tot je aan lijn 16 komt, net na `Console.WriteLine("Performing base class drawing tasks")`.  
    **Wat is de console output tot dit punt?**
