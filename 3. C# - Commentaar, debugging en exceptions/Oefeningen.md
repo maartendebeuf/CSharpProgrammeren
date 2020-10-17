@@ -81,12 +81,12 @@ Sleep nu de *gele pijl*, deze pijl toont waar je debugsessie momenteel gepauzeer
 Hieronder vind je een lijst van veel voorkomende `exceptions`. Kan je, na het lezen van de naam, gokken wanneer/waarom de `exception` wordt opgesmeten? 
 Zoek daarna via Google naar het correcte antwoord. Noteer alles in een markdown bestand en upload het naar GitHub.
    * InvalidOperationException **foute functie**, *The exception that is thrown when a method call is invalid for the object's current state.* 
-   * StackOverflowException ** **foute aantallen in lijsten **
-   * OutOfMemoryException **geheugentekort**
-   * AccessException **geen toegang tot bestand**
-   * ArithmeticException ****
-   * DevideByZeroException **kan niet delen door nul**
-   * FormatException **bv: krijgt een string maar verwacht een int**
-   * InvalidCastException **kan een waarde niet omzetten**
-   * NotSupportedException **niet gedefinieerde fout**
-   * Exception **alle fouten**
+   * StackOverflowException **foute aantallen in lijsten **, *The exception that is thrown when the execution stack overflows because it contains too many nested method calls.* 
+   * OutOfMemoryException **geheugentekort**, *The exception that is thrown when there is not enough memory to continue the execution of a program.*
+   * AccessException **geen toegang tot bestand**, *niet gevonden(unauthorized access exception?)
+   * ArithmeticException **??**, *The exception that is thrown for errors in an arithmetic, casting, or conversion operation*
+   * DevideByZeroException **kan niet delen door nul**, *The exception that is thrown when there is an attempt to divide an integral or Decimal value by zero.*
+   * FormatException **bv: krijgt een string maar verwacht een int**, *The exception that is thrown when the format of an argument is invalid, or when a composite format string is not well formed.*
+   * InvalidCastException **kan een waarde niet omzetten**, *The exception that is thrown for invalid casting or explicit conversion.*
+   * NotSupportedException **niet gedefinieerde fout**, *The exception that is thrown when an invoked method is not supported, or when there is an attempt to read, seek, or write to a stream that does not support the invoked functionality.*
+   * Exception **alle fouten**, *Represents errors that occur during application execution.*
