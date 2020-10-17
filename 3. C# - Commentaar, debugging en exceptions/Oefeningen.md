@@ -80,7 +80,7 @@ Sleep nu de *gele pijl*, deze pijl toont waar je debugsessie momenteel gepauzeer
 
 Hieronder vind je een lijst van veel voorkomende `exceptions`. Kan je, na het lezen van de naam, gokken wanneer/waarom de `exception` wordt opgesmeten? 
 Zoek daarna via Google naar het correcte antwoord. Noteer alles in een markdown bestand en upload het naar GitHub.
-   * InvalidOperationException **foute functie, *The exception that is thrown when a method call is invalid for the object's current state.* **
+   * InvalidOperationException **foute functie**, *The exception that is thrown when a method call is invalid for the object's current state.* 
    * StackOverflowException ** **foute aantallen in lijsten **
    * OutOfMemoryException **geheugentekort**
    * AccessException **geen toegang tot bestand**
