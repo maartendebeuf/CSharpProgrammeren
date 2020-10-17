@@ -74,16 +74,19 @@ Sleep nu de *gele pijl*, deze pijl toont waar je debugsessie momenteel gepauzeer
 2. Boek p37: Opdracht Foutmelding 1: Messagebox (opdracht variabelen is te vinden op p32)
 3. Kan je in je eigen woorden uitleggen wat `Exceptions` zijn en waarvoor ze dienen? 
 
+**(voorgedefinieerde) fouten die kunnen vookomen als de code uitgevoerd wordt.**
+
 ### Extra
 
-Hieronder vind je een lijst van veel voorkomende `exceptions`. Kan je, na het lezen van de naam, gokken wanneer/waarom de `exception` wordt opgesmeten? Zoek daarna via Google naar het correcte antwoord. Noteer alles in een markdown bestand en upload het naar GitHub.
-   * InvalidOperationException
-   * StackOverflowException
-   * OutOfMemoryException
-   * AccessException
-   * ArithmeticException
-   * DevideByZeroException
-   * FormatException
-   * InvalidCastException
-   * NotSupportedException
-   * Exception
+Hieronder vind je een lijst van veel voorkomende `exceptions`. Kan je, na het lezen van de naam, gokken wanneer/waarom de `exception` wordt opgesmeten? 
+Zoek daarna via Google naar het correcte antwoord. Noteer alles in een markdown bestand en upload het naar GitHub.
+   * InvalidOperationException **foute functie, *The exception that is thrown when a method call is invalid for the object's current state.* **
+   * StackOverflowException ** **foute aantallen in lijsten **
+   * OutOfMemoryException **geheugentekort**
+   * AccessException **geen toegang tot bestand**
+   * ArithmeticException ****
+   * DevideByZeroException **kan niet delen door nul**
+   * FormatException **bv: krijgt een string maar verwacht een int**
+   * InvalidCastException **kan een waarde niet omzetten**
+   * NotSupportedException **niet gedefinieerde fout**
+   * Exception **alle fouten**
