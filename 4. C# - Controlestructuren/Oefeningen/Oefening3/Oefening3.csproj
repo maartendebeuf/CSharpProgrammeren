@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20EF45E0-C057-4E08-9A8B-E88CC0AA6A58}</ProjectGuid>
+    <ProjectGuid>{022DC664-513B-460D-B2D3-DAEB72717EC2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_1.Naam</RootNamespace>
-    <AssemblyName>_1.Naam</AssemblyName>
+    <RootNamespace>Oefening3</RootNamespace>
+    <AssemblyName>Oefening3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,16 +25,13 @@ namespace FoutVoorbeeld
         {
             InitializeComponent();
         }
+                
 
         private void btnBreuk_Click(object sender, RoutedEventArgs e)
         {
             //initialisatie van de variabelen
             double getal = 0;
-            double breuk = 0;
-            if (string.IsNullOrEmpty(txbGetal.Text))
-            {
-                throw new ApplicationException("verplicht veld!");
-            }
+            double breuk = 0;            
             //toekenning van waarden / berekening
             try
             {

@@ -71,9 +71,9 @@ Sleep nu de *gele pijl*, deze pijl toont waar je debugsessie momenteel gepauzeer
 ## Exceptions
 
 1. Boek p34: Voorbeeld foutafhandeling
-2. Boek p37: Opdracht Foutmelding 1: Messagebox (opdracht variabelen is te vinden op p32)
+2. Boek p37: Opdracht Foutmelding 1: Messagebox (opdracht variabelen is te vinden op p32) ** ErrorProvider-control zit niet in de toolbox** *link: https://www.codeproject.com/Articles/15239/Validation-in-Windows-Presentation-Foundation*
 3. Kan je in je eigen woorden uitleggen wat `Exceptions` zijn en waarvoor ze dienen? 
-
+n
 **(voorgedefinieerde) fouten die kunnen vookomen als de code uitgevoerd wordt.**
 
 ### Extra
