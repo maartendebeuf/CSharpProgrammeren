@@ -32,12 +32,12 @@ namespace Oefening3
             }
 
             if (geslaagd>= maxExamens - 1
-                && gemiddelde>50)
+                && gemiddelde>=50)
             {
                 Console.WriteLine("Je bent geslaagd! " + (maxExamens- geslaagd) + " onvoldoendes en " + gemiddelde + "%. :)");
             }
             else if (geslaagd < maxExamens - 1
-                && gemiddelde > 50)
+                && gemiddelde >= 50)
             {
                 Console.WriteLine("Je bent niet geslaagd! Je had " + (maxExamens - geslaagd) + " onvoldoendes. :(");
             }

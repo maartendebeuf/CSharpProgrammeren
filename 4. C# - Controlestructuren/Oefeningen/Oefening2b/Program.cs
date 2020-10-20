@@ -25,39 +25,23 @@ namespace Oefening2b
 
             switch (maand)
             {
-                case "maart":
-                    Console.WriteLine("seizoen = Lente");                   
-                    break;
+                case "maart":                    
                 case "april":
-                    Console.WriteLine("seizoen = Lente");
-                    break;
                 case "mei":
                     Console.WriteLine("seizoen = Lente");
                     break;
                 case "juni":
-                    Console.WriteLine("seizoen = Zomer");
-                    break;
                 case "juli":
-                    Console.WriteLine("seizoen = Zomer");
-                    break;
                 case "augustus":
                     Console.WriteLine("seizoen = Zomer");
                     break;
                 case "september":
-                    Console.WriteLine("seizoen = Herfst");
-                    break;
                 case "oktoer":
-                    Console.WriteLine("seizoen = Herfst");
-                    break;
                 case "november":
                     Console.WriteLine("seizoen = Herfst");
                     break;
                 case "december":
-                    Console.WriteLine("seizoen = Winter");
-                    break;
                 case "januari":
-                    Console.WriteLine("seizoen = Winter");
-                    break;
                 case "februari":
                     Console.WriteLine("seizoen = Winter");
                     break;

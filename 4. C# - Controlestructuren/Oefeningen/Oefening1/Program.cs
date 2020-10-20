@@ -24,7 +24,7 @@ namespace Oefening1
             {
                 Console.WriteLine("U bent nog niet volwassen.");
             }
-            else if (leeftijd >= 18 || leeftijd <= 25)
+            else if (leeftijd <= 25)
             {
                 Console.WriteLine("U bent een jongvolwassene.");
             }

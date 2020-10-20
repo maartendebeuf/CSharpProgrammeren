@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OefeningenBoek39
+namespace OefeningenBoek40
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -36,17 +36,30 @@ namespace OefeningenBoek39
             }
             else
             {
-                if ((bool)rbMeisje.IsChecked)
+                if (meisje)
                 {
                     tbOutput.Text = "Wat wil je dan wel drinken?";
                 }
-                if ((bool)rbJongen.IsChecked)
+                else
                 {
-                tbOutput.Text = "Enkel nog water te verkrijgen .";
+                    tbOutput.Text = "Enkel nog water te verkrijgen.";
 
                 }
             }
 
+        }
+        private bool meisje;        
+        private void cbMeisje_Checked(object sender, RoutedEventArgs e)
+        {
+            cbJongen.IsChecked = false;
+            meisje = true;
+
+        }
+
+        private void cbJongen_Checked(object sender, RoutedEventArgs e)
+        {
+            cbMeisje.IsChecked = false;
+            meisje = !true;
         }
     }
 }
