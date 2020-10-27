@@ -11,21 +11,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefening2b", "Oefening2b\Oe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefening3", "Oefening3\Oefening3.csproj", "{022DC664-513B-460D-B2D3-DAEB72717EC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningExtra1", "OefeningExtra1\OefeningExtra1.csproj", "{618A76DE-A3C4-4BBC-8704-77D708056B82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningLus1", "OefeningExtra1\OefeningLus1.csproj", "{618A76DE-A3C4-4BBC-8704-77D708056B82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningExtra2a", "OefeningExtra2\OefeningExtra2a.csproj", "{FACC5527-F84D-4630-9C7F-373A024792A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningLus2a", "OefeningExtra2\OefeningLus2a.csproj", "{FACC5527-F84D-4630-9C7F-373A024792A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningExtra2b", "OefeningExtra2b\OefeningExtra2b.csproj", "{36AE2113-C3B5-47F9-8181-42500840F2B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningLus2b", "OefeningExtra2b\OefeningLus2b.csproj", "{36AE2113-C3B5-47F9-8181-42500840F2B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningExtra3a", "OefeningExtra3a\OefeningExtra3a.csproj", "{6494ECC6-C18E-4D70-9700-4AABF713B887}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningLus3a", "OefeningExtra3a\OefeningLus3a.csproj", "{6494ECC6-C18E-4D70-9700-4AABF713B887}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningExtra3b", "OefeningExtra3b\OefeningExtra3b.csproj", "{3875CBEF-6217-4A3E-9513-C64D849BE11D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningLus3b", "OefeningExtra3b\OefeningLus3b.csproj", "{3875CBEF-6217-4A3E-9513-C64D849BE11D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningenBoek39", "OefeningenBoek39\OefeningenBoek39.csproj", "{70F65B6D-79F0-4724-97E1-A814CDE5AEB0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningenBoek40", "OefeningenBoek40\OefeningenBoek40.csproj", "{74412C01-CA6C-485A-9BBF-2BDCEF91422A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningExtra4", "OefeningExtra4\OefeningExtra4.csproj", "{AA15E69D-4BC9-4F98-BD95-F1FA6D8F28A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningLus4", "OefeningExtra4\OefeningLus4.csproj", "{AA15E69D-4BC9-4F98-BD95-F1FA6D8F28A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningLusBoek51a", "OefeningLusBoek51a\OefeningLusBoek51a.csproj", "{8FCDA4BA-9419-4463-91BB-7BFABF3BC537}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{AA15E69D-4BC9-4F98-BD95-F1FA6D8F28A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA15E69D-4BC9-4F98-BD95-F1FA6D8F28A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA15E69D-4BC9-4F98-BD95-F1FA6D8F28A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCDA4BA-9419-4463-91BB-7BFABF3BC537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCDA4BA-9419-4463-91BB-7BFABF3BC537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCDA4BA-9419-4463-91BB-7BFABF3BC537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCDA4BA-9419-4463-91BB-7BFABF3BC537}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -24,30 +24,7 @@ namespace OefeningenBoek40
         {
             InitializeComponent();
         }
-
-        private void dateTimePicker_CalendarClosed(object sender, RoutedEventArgs e)
-        {
-            DateTime verjaardag = (DateTime)dateTimePicker.SelectedDate;
-            int dagen = (int)(DateTime.Now - verjaardag).TotalDays;
-            if (dagen < 18 * 356.25)
-            {
-                tbOutput.Text = "Je bent nog niet oud genoeg om te drinken";
-                
-            }
-            else
-            {
-                if (meisje)
-                {
-                    tbOutput.Text = "Wat wil je dan wel drinken?";
-                }
-                else
-                {
-                    tbOutput.Text = "Enkel nog water te verkrijgen.";
-
-                }
-            }
-
-        }
+               
         private bool meisje;        
         private void cbMeisje_Checked(object sender, RoutedEventArgs e)
         {
@@ -60,6 +37,46 @@ namespace OefeningenBoek40
         {
             cbMeisje.IsChecked = false;
             meisje = !true;
+        }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime geboortedatum = (DateTime)dateTimePicker.SelectedDate;
+            DateTime schoolfeestdatum = (DateTime)dateTimePicker_Copy.SelectedDate;
+            int dagen = (int)(DateTime.Now - geboortedatum).TotalDays;
+            if (dagen < 18 * 356.25)
+            {
+                tbOutput.Text = "Je bent nog niet oud genoeg om te drinken.\n" +
+                        "Je mag pas alcohol drinken vanaf " + geboortedatum.AddYears(18).ToShortDateString();
+
+            }
+            else
+            {
+                if (meisje)
+                {
+                    tbOutput.Text = "Wat wil je dan wel drinken?";
+                }
+                else
+                {
+                    tbOutput.Text = "Enkel nog water te verkrijgen.";
+
+
+                }
+            }
+        }
+
+        private void btnStart_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime geboortedatum = (DateTime)dateTimePicker.SelectedDate;
+            DateTime schoolfeestdatum = (DateTime)dateTimePicker_Copy.SelectedDate;
+            if (schoolfeestdatum< geboortedatum.AddYears(18))
+            {
+                tbOutput.Text = "Dikke pech.";
+            }
+            else
+            {
+                tbOutput.Text = "Proficiat maar toch opletten he";
+            }
         }
     }
 }

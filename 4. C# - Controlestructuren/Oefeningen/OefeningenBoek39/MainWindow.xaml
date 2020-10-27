@@ -8,10 +8,11 @@
         Title="MainWindow" Height="194.938" Width="281.562">
     <Grid>
         <Label x:Name="label" Content="selecteer uw verjaardag" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top"/>
-        <DatePicker x:Name="dateTimePicker" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="114" CalendarClosed="dateTimePicker_CalendarClosed"/>
+        <DatePicker x:Name="dateTimePicker" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="114"/>
         <TextBlock x:Name="tbOutput" Margin="10,69,10,0" TextWrapping="WrapWithOverflow" Text="TextBlock" VerticalAlignment="Top" Height="85"/>
         <RadioButton x:Name="rbMeisje" Content="Meisje" HorizontalAlignment="Left" Margin="18,48,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbJongen" Content="Jongen" HorizontalAlignment="Left" Margin="150,48,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbJongen" Content="Jongen" HorizontalAlignment="Left" Margin="110,48,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="189,45,0,0" Click="Start_Click"/>
 
     </Grid>
 </Window>

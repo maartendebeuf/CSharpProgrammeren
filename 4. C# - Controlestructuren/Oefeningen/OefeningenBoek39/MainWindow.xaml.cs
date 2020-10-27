@@ -24,15 +24,15 @@ namespace OefeningenBoek39
         {
             InitializeComponent();
         }
-
-        private void dateTimePicker_CalendarClosed(object sender, RoutedEventArgs e)
+                
+        private void Start_Click(object sender, RoutedEventArgs e)
         {
             DateTime verjaardag = (DateTime)dateTimePicker.SelectedDate;
             int dagen = (int)(DateTime.Now - verjaardag).TotalDays;
             if (dagen < 18 * 356.25)
             {
                 tbOutput.Text = "Je bent nog niet oud genoeg om te drinken";
-                
+
             }
             else
             {
@@ -42,11 +42,10 @@ namespace OefeningenBoek39
                 }
                 if ((bool)rbJongen.IsChecked)
                 {
-                tbOutput.Text = "Enkel nog water te verkrijgen .";
+                    tbOutput.Text = "Enkel nog water te verkrijgen .";
 
                 }
             }
-
         }
     }
 }

@@ -5,13 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OefeningenBoek40"
         mc:Ignorable="d"
-        Title="MainWindow" Height="194.938" Width="281.562">
+        Title="MainWindow" Height="194.938" Width="353.851">
     <Grid>
-        <Label x:Name="label" Content="selecteer uw verjaardag" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top"/>
-        <DatePicker x:Name="dateTimePicker" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="114" CalendarClosed="dateTimePicker_CalendarClosed"/>
-        <TextBlock x:Name="tbOutput" Margin="10,69,10,0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Height="85"/>
-        <CheckBox x:Name="cbMeisje" Content="Meisje" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Checked="cbMeisje_Checked"/>
-        <CheckBox x:Name="cbJongen" Content="Jongen" HorizontalAlignment="Left" Margin="150,39,0,0" VerticalAlignment="Top" Checked="cbJongen_Checked"/>
+        <Label x:Name="label" Content="geboortedatum" Margin="10,0,0,105" VerticalAlignment="Bottom"/>
+        <DatePicker x:Name="dateTimePicker" HorizontalAlignment="Right" Margin="0,0,100,105" VerticalAlignment="Bottom" Width="114"/>
+        <TextBlock x:Name="tbOutput" Margin="10,93,10,0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Height="61"/>
+        <CheckBox x:Name="cbMeisje" Content="Meisje" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Checked="cbMeisje_Checked"/>
+        <CheckBox x:Name="cbJongen" Content="Jongen" HorizontalAlignment="Left" Margin="95,13,0,0" VerticalAlignment="Top" Checked="cbJongen_Checked"/>
+        <Button x:Name="btnStart" Content="Start" VerticalAlignment="Bottom" Margin="0,0,10,107" Click="btnStart_Click" HorizontalAlignment="Right" Width="83"/>
+        <Label x:Name="label_Copy" Content="Volgend schoolfeest" HorizontalAlignment="Left" Margin="10,0,0,76" VerticalAlignment="Bottom"/>
+        <DatePicker x:Name="dateTimePicker_Copy" HorizontalAlignment="Right" Margin="0,0,100,76" VerticalAlignment="Bottom" Width="114"/>
+        <Button x:Name="btnStart_Copy" Content="Start" VerticalAlignment="Bottom" Margin="0,0,10,78" Click="btnStart_Copy_Click" HorizontalAlignment="Right" Width="83"/>
 
     </Grid>
 </Window>
