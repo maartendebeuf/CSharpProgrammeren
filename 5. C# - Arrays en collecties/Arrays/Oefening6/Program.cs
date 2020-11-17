@@ -22,7 +22,7 @@ namespace Oefening6
             foreach (int c in cijfers)
             {
                 Console.WriteLine("Geef nummer " + i + ":");
-                cijfers[i] = int.Parse(Console.ReadLine());
+                cijfers[i-1] = int.Parse(Console.ReadLine());
                 i++;
             }
 
