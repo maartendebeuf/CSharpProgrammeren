@@ -1,0 +1,22 @@
+﻿<Window x:Class="Oefening4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oefening4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="228.75" Width="264.688">
+    <Grid>
+        <Label x:Name="lblLengte" Content="Lengte" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="lblBreedte" Content="Breedte" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="tbxLengte" HorizontalAlignment="Left" Height="23" Margin="115,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxBreedte" HorizontalAlignment="Left" Height="23" Margin="115,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblOppervlakte" Content="Oppervlakte" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="lblOppervlakteResultaat" Content="" HorizontalAlignment="Left" Margin="115,72,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnOppervlakte" Content="Bereken oppervlakte" HorizontalAlignment="Left" Margin="115,103,0,0" VerticalAlignment="Top" Width="120" Click="btnOppervlakte_Click"/>
+        <Label x:Name="lblOmtrek" Content="Omtrek" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="lblOmtrekResultaat" Content="" HorizontalAlignment="Left" Margin="115,128,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnOmtrek" Content="Bereken omtrek" HorizontalAlignment="Left" Margin="115,159,0,0" VerticalAlignment="Top" Width="120" Click="btnOmtrek_Click"/>
+
+    </Grid>
+</Window>
