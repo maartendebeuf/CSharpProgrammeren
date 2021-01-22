@@ -1,0 +1,19 @@
+﻿<Window x:Class="Oefening7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oefening7"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="335.896" Width="492.5">
+    <Grid>
+        <TextBox x:Name="tbxNieuweAuto" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" TextWrapping="Wrap" Text="Naam auto" VerticalAlignment="Top" Width="213"/>
+        <Button x:Name="btnNieuweAuto" Content="Voeg toe" HorizontalAlignment="Left" Margin="228,12,0,0" VerticalAlignment="Top" Width="235" Height="23" FontSize="14" Click="btnNieuweAuto_Click"/>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="228,40,0,0" VerticalAlignment="Top" Width="235" Height="95" FontSize="48" FontWeight="Bold" Click="btnStart_Click"/>
+        <Button x:Name="btnVooruit" Content="↑" HorizontalAlignment="Left" Margin="308,140,0,0" VerticalAlignment="Top" Width="75" Height="75" FontSize="48" RenderTransformOrigin="0.502,0.498" Click="btnVooruit_Click"/>
+        <Button x:Name="btnLinks" Content="←" HorizontalAlignment="Left" Margin="228,220,0,0" VerticalAlignment="Top" Width="75" Height="75" FontSize="48" Click="btnLinks_Click"/>
+        <Button x:Name="btnRechts" Content="→" HorizontalAlignment="Left" Margin="388,220,0,0" VerticalAlignment="Top" Width="75" Height="75" FontSize="48" Click="btnRechts_Click"/>
+        <ListBox x:Name="lbAuto" HorizontalAlignment="Left" Height="255" Margin="10,40,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="lbAuto_SelectionChanged"/>
+
+    </Grid>
+</Window>

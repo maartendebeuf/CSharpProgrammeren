@@ -9,43 +9,58 @@ namespace Oefening6
     class Program
     {
         static void Main(string[] args)
-        {
-            //Oefening 7
-            //
-            //Maak een applicatie die 10 getallen vraagt en daarna het gemiddelde van alle positieve en het gemiddelde van alle negatieve getallen berekent en toont.
-
+        {            
             //## Oefening 6 (Console)
 
             //Neem **de oplossing van oefening 7** uit de module *Arrays en collecties* en pas deze aan zodat je gebruik maakt van methodes.
 
-            int aantal = 10;
+            int aantal = 5;
             int[] getallen = new int[aantal];
-            int somNegatief = 0;
-            int aantNegatief = 0;
-            int gemNegatief = 0;
-            int somPositief = 0;
-            int aantPositief = 0;
-            int gemPositief = 0;
 
             for (int i = 0; i < aantal; i++)
             {
                 Console.WriteLine("geef getal" + (i + 1) + " in: ");
-                getallen[i] = int.Parse(Console.ReadLine());
+                getallen[i] = int.Parse(Console.ReadLine());                
+            }
 
-                if (getallen[i] % 2.0 != 0)
+            int gemiddeldePositief = GemiddeldePositief(getallen);
+            int gemiddeldeNegatief = GemiddeldeNegatief(getallen);
+
+            Console.WriteLine("Het gemiddelde van alle positieve getallen is: " + gemiddeldePositief);
+            Console.WriteLine("Het gemiddelde van alle positieve getallen is: " + gemiddeldeNegatief);
+            Console.ReadLine();
+        }
+
+        static int GemiddeldePositief(int[] inpGetallen)
+        {
+            int somPositief = 0;
+            int aantPositief = 0;
+            foreach (var getal in inpGetallen)
+            {
+                if (getal >= 0)
                 {
-                    somNegatief += getallen[i];
-                    aantNegatief++;
-                }
-                else
-                {
-                    somPositief += getallen[i];
+                    somPositief += getal;
                     aantPositief++;
                 }
             }
-            Console.WriteLine("Het gemiddelde van alle positieve getallen is: " + (somPositief / aantPositief));
-            Console.WriteLine("Het gemiddelde van alle positieve getallen is: " + (somNegatief / aantNegatief));
-            Console.ReadLine();
+            int GemiddeldePositief = somPositief / aantPositief;
+            return GemiddeldePositief;
         }
+
+        static int GemiddeldeNegatief(int[] inpGetallen)
+        {
+            int somNegatief = 0;
+            int aantNegatief = 0;
+            foreach (var getal in inpGetallen)
+            {
+                if (getal < 0)
+                {
+                    somNegatief += getal;
+                    aantNegatief++;
+                }
+            }
+            int GemiddeldeNegatief = somNegatief / aantNegatief;
+            return GemiddeldeNegatief;
+        }        
     }
 }
