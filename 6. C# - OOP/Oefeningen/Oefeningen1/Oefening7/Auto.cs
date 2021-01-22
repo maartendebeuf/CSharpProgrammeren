@@ -20,6 +20,8 @@ namespace Oefening7
         {
             string nieuweAuto = inpAutoNaam;
             autoNaam = nieuweAuto;
+            MessageBox.Show($"De {autoNaam} is toegevoegd aan de garage.");
+
         }
         public void Start()
         {

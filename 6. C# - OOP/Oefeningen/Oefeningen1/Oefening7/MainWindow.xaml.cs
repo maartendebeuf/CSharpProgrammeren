@@ -29,7 +29,7 @@ namespace Oefening7
     public partial class MainWindow : Window
     {
         List<Auto> autolijst = new List<Auto>();
-        int autokeuze = 0;
+        int autokeuze = -1;
 
         public MainWindow()
         {
@@ -44,6 +44,7 @@ namespace Oefening7
             autolijst.Add(auto);
 
             lbAuto.Items.Add(nieuweAuto);
+            autokeuze = autolijst.Count - 1;
         }                
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
@@ -51,38 +52,54 @@ namespace Oefening7
             if (autolijst.Count>0)
             {
                 autolijst[autokeuze].Start();
-            }            
+            }
+            else
+            {
+                MessageBox.Show("Maak eerst een auto aan.");
+            }
         }
         private void btnVooruit_Click(object sender, RoutedEventArgs e)
         {
-            if (autolijst[autokeuze].Gestart())
+            if (autolijst.Count > 0 && autolijst[autokeuze].Gestart())
             {
                 autolijst[autokeuze].Vooruit();
+            }
+            else
+            {
+                MessageBox.Show("Start een auto.");
             }
         }
 
         private void btnLinks_Click(object sender, RoutedEventArgs e)
         {
-            if (autolijst[autokeuze].Gestart())
+            if (autolijst.Count > 0 && autolijst[autokeuze].Gestart())
             {
                 autolijst[autokeuze].Links();
+            }
+            else
+            {
+                MessageBox.Show("Start een auto.");
             }
         }
 
         private void btnRechts_Click(object sender, RoutedEventArgs e)
         {
-            if (autolijst[autokeuze].Gestart())
+            if (autolijst.Count > 0 && autolijst[autokeuze].Gestart())
             {
                 autolijst[autokeuze].Rechts();
+            }
+            else
+            {
+                MessageBox.Show("Start een auto.");
             }
         }
 
         private void lbAuto_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (autolijst[autokeuze].Gestart())
+            if (autolijst.Count > 0 && autolijst[autokeuze].Gestart())
             {
                 autokeuze = lbAuto.SelectedIndex;
-            }
+            }            
         }
     }
 }
