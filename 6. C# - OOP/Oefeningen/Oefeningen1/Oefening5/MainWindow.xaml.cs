@@ -51,7 +51,7 @@ namespace Oefening5
         private double OppervlakteCirkel(double straal)
         {
 
-            double oppervlakte = (straal*straal)*Math.PI;
+            double oppervlakte = Math.Round((straal*straal)*Math.PI, 2);
 
             return oppervlakte;
         }
@@ -75,7 +75,7 @@ namespace Oefening5
         private double OmtrekCirkel(double straal)
         {
 
-            double oppervlakte = (straal + straal) * Math.PI;
+            double oppervlakte = Math.Round((straal + straal) * Math.PI,2);
 
             return oppervlakte;
         }
