@@ -1,0 +1,17 @@
+﻿<Window x:Class="OpdrachtDataEnControlestructuren.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OpdrachtDataEnControlestructuren"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="230.146" Width="345.322">
+    <Grid>
+        <Label x:Name="lblTotaalprijs" Content="Totaalprijs" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxTotaalprijs" Height="23" Margin="78,10,10,0" TextWrapping="Wrap" Text="Geef de totaalprijs in" VerticalAlignment="Top" GotMouseCapture="tbxTotaalprijs_GotMouseCapture" Foreground="#FF878787" LostMouseCapture="tbxTotaalprijs_LostMouseCapture"/>
+        <Label x:Name="lblAantal" Content="Aantal" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxAantal" Height="23" Margin="78,38,10,0" TextWrapping="Wrap" Text="Geef het aantal artikelen in" VerticalAlignment="Top" Foreground="#FF878787" GotMouseCapture="tbxAantal_GotMouseCapture"/>
+        <Button x:Name="btnBerekenKorting" Content="Bereken de korting" Margin="10,66,10,0" VerticalAlignment="Top" IsDefault="True" Click="btnBerekenKorting_Click"/>
+        <Label x:Name="lblGekregenKorting" Content="Label" Margin="10,91,10,10" FontSize="24" FontWeight="Bold" FontStyle="Italic"/>
+    </Grid>
+</Window>
