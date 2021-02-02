@@ -13,43 +13,34 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Oefening1
+namespace Oefening1_uitbreinding
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-
-    //## Oefening 1
-
-    //Ontwerp een applicatie om een bestelling te verwerken.\
-    //Te bewaren in een object:
-    //* Naam besteld artikel
-    //* Eenheidsprijs artikel
-    //* Aantal bestelde artikelen
-    //* Totaalprijs bestelling
-    
-
-    //    Werk met methodes en/of properties. Toon als laatste een overzicht van de bestelling (product, aantal, eenheidsprijs en totaalprijs).
-
-    //** Uitbreiding**: Voorzie dat je een lijst met bestellingen kan toevoegen, opslaan en weergeven.
-
     public partial class MainWindow : Window
-    {        
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+    {
+        List<Bestelling> bestellingen = new List<Bestelling>();
+
+        Bestelling nieuweBestelling;
+
         bool ArtikelNaamIngevuld;
         bool EenheidsprijsIngevuld;
         bool AantalArtikelenIngevuld;
 
-        Bestelling nieuweBestelling = new Bestelling();
+        public MainWindow()
+        {
+            InitializeComponent();
+            nieuweBestelling = new Bestelling();
+            dbBestellingen.ItemsSource = bestellingen;
+
+        }
 
         private void tbxArtikelNaam_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if(tbxArtikelNaam.Text != "")
+            if (tbxArtikelNaam.Text != "")
             {
-                ArtikelNaamIngevuld=true;
+                ArtikelNaamIngevuld = true;
                 nieuweBestelling.ArtikelNaam = tbxArtikelNaam.Text;
                 Berekening();
             }
@@ -95,14 +86,29 @@ namespace Oefening1
 
         public void Berekening()
         {
-            if(ArtikelNaamIngevuld && EenheidsprijsIngevuld && AantalArtikelenIngevuld)
+            if (ArtikelNaamIngevuld && EenheidsprijsIngevuld && AantalArtikelenIngevuld)
             {
                 string ArtikelNaam = nieuweBestelling.ArtikelNaam;
                 int Eenheidsprijs = nieuweBestelling.Eenheidsprijs;
                 int AantalArtikelen = nieuweBestelling.AantalArtikelen;
-                int Totaalprijs = nieuweBestelling.GetTotaalprijs();
-                lblTotaalprijsResultaat.Content = $"{ArtikelNaam}, {Eenheidsprijs}euro/stuk, {AantalArtikelen}stuks.\nTotaal = {Totaalprijs}euro";
+                int Totaalprijs = nieuweBestelling.Totaalprijs;
+                lblTotaalprijsResultaat.Content = $"{ArtikelNaam}, {Eenheidsprijs}euro/stuk, {AantalArtikelen}stuks. Totaal = {Totaalprijs}euro";
             }
+        }
+
+        private void btnToevoegen_Click(object sender, RoutedEventArgs e)
+        {
+            bestellingen.Add(nieuweBestelling);
+            dbBestellingen_Update();
+            tbxArtikelNaam.Text = "";
+            tbxAantalArtikelen.Text = "";
+            tbxEenheidsprijs.Text = "";
+            nieuweBestelling = new Bestelling();
+        }
+
+        private void dbBestellingen_Update()
+        {
+            dbBestellingen.Items.Refresh();
         }
     }
 }
