@@ -8,7 +8,7 @@
         Title="MainWindow" Height="230.146" Width="345.322">
     <Grid>
         <Label x:Name="lblTotaalprijs" Content="Totaalprijs" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxTotaalprijs" Height="23" Margin="78,10,10,0" TextWrapping="Wrap" Text="Geef de totaalprijs in" VerticalAlignment="Top" GotMouseCapture="tbxTotaalprijs_GotMouseCapture" Foreground="#FF878787" LostMouseCapture="tbxTotaalprijs_LostMouseCapture"/>
+        <TextBox x:Name="tbxTotaalprijs" Height="23" Margin="78,10,10,0" TextWrapping="Wrap" Text="Geef de totaalprijs in" VerticalAlignment="Top" GotMouseCapture="tbxTotaalprijs_GotMouseCapture" Foreground="#FF878787"/>
         <Label x:Name="lblAantal" Content="Aantal" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxAantal" Height="23" Margin="78,38,10,0" TextWrapping="Wrap" Text="Geef het aantal artikelen in" VerticalAlignment="Top" Foreground="#FF878787" GotMouseCapture="tbxAantal_GotMouseCapture"/>
         <Button x:Name="btnBerekenKorting" Content="Bereken de korting" Margin="10,66,10,0" VerticalAlignment="Top" IsDefault="True" Click="btnBerekenKorting_Click"/>
