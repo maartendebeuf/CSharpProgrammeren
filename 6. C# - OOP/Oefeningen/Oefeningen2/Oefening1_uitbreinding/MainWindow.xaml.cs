@@ -33,7 +33,6 @@ namespace Oefening1_uitbreinding
             InitializeComponent();
             nieuweBestelling = new Bestelling();
             dbBestellingen.ItemsSource = bestellingen;
-
         }
 
         private void tbxArtikelNaam_TextChanged(object sender, TextChangedEventArgs e)
