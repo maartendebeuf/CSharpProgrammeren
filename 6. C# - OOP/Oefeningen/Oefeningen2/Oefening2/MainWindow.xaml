@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Oefening2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="275.671" Width="366.478">
+        Title="MainWindow" Height="366.338" Width="342.478">
     <Grid Margin="-2,0,2,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="143*"/>
@@ -17,8 +17,10 @@
         <TextBox x:Name="tbxNaam" Height="23" Margin="10,45,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" TextChanged="tbxNaam_TextChanged"/>
         <Label x:Name="lblKlas" Content="klas" Margin="10,72,10,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right"/>
         <TextBox x:Name="tbxKlas" Height="23" Margin="10,76,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" TextChanged="tbxKlas_TextChanged"/>
-        <Button x:Name="btnToevoegen" Content="Voeg leerling toe" Margin="10,104,10,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="20" Click="btnToevoegen_Click"/>
-        <DataGrid x:Name="dgLeerlingen" Margin="10,129,10,10" Grid.ColumnSpan="2" CellEditEnding="dgLeerlingen_CellEditEnding"/>
+        <Button x:Name="btnToevoegen" Content="Voeg leerling toe" Margin="10,104,10,0" VerticalAlignment="Top" Height="20" Click="btnToevoegen_Click"/>
+        <DataGrid x:Name="dgLeerlingen" Margin="10,200,10,10" Grid.ColumnSpan="2" SelectionChanged="dgLeerlingen_SelectionChanged" Focusable="False" IsReadOnly="True"/>
+        <Label x:Name="lblLeerlingInfo" Content="" Margin="10,129,10,140" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnAanpassen" Content="Pas leerling aan" Margin="10,104,10,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Click="btnAanpassen_Click"/>
 
     </Grid>
 </Window>

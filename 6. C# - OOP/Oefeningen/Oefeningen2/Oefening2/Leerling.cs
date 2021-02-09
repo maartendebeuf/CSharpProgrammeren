@@ -15,11 +15,10 @@ namespace Oefening2
 
     class Leerling
     {
-        public Leerling()
-        {
-            
-        }
-
+        public string Voornaam { get; set; }
+        public string Naam { get; set; }
+        public string Klas { get; set; }
+        
         public Leerling(string inpVoornaam, string inpNaam, string inpKlas)
         {
             Voornaam = inpVoornaam;
@@ -27,8 +26,32 @@ namespace Oefening2
             Klas = inpKlas;
         }
 
-        public string Voornaam { get; set; }
-        public string Naam { get; set; }
-        public string Klas { get; set; }
+        public void UpdateLeerling(string inpVoornaam, string inpNaam, string inpKlas)
+        {
+            if (!string.IsNullOrWhiteSpace(inpVoornaam))
+            {
+                Voornaam = inpVoornaam;
+            }
+            if (!string.IsNullOrWhiteSpace(inpNaam))
+            {
+                Naam = inpNaam;
+            }
+            if (!string.IsNullOrWhiteSpace(inpKlas))
+            {
+                Klas = inpKlas;
+            }
+        }
+
+        public string GetLeelingInfo()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            stringBuilder.AppendLine("Voornaam: " + Voornaam);
+            stringBuilder.AppendLine("Naam: " + Naam);
+            stringBuilder.AppendLine("Klas: " + Klas);
+
+            return stringBuilder.ToString();
+        }
+
     }
 }

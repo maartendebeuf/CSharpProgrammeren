@@ -61,6 +61,8 @@ namespace Oefening2
                 Leerling leerling = new Leerling(voornaam, naam, klas);
                 leerlingen.Add(leerling);
                 dgLeerling_Update();
+                lblLeerlingInfo.Content = leerling.GetLeelingInfo();
+                dgLeerlingen.SelectedCells;
             }
         }
 
@@ -68,10 +70,22 @@ namespace Oefening2
         {
             dgLeerlingen.Items.Refresh();
         }
-
-        private void dgLeerlingen_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+                
+        private void dgLeerlingen_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            dgLeerlingen.Items.c
+            lblLeerlingInfo.Content = leerlingen[dgLeerlingen.SelectedIndex].GetLeelingInfo();
+
+            tbxVoornaam.Text = leerlingen[dgLeerlingen.SelectedIndex].Voornaam;
+            tbxNaam.Text = leerlingen[dgLeerlingen.SelectedIndex].Naam;
+            tbxKlas.Text = leerlingen[dgLeerlingen.SelectedIndex].Klas;
+            dgLeerling_Update();
+        }
+
+        private void btnAanpassen_Click(object sender, RoutedEventArgs e)
+        {
+            leerlingen[dgLeerlingen.SelectedIndex].UpdateLeerling(voornaam, naam, klas);
+            dgLeerling_Update();
+            lblLeerlingInfo.Content = leerlingen[dgLeerlingen.SelectedIndex].GetLeelingInfo();
         }
     }
 }
