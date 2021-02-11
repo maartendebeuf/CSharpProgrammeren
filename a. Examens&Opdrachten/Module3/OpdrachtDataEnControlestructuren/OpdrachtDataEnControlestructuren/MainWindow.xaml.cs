@@ -44,110 +44,79 @@ namespace OpdrachtDataEnControlestructuren
             tbxTotaalprijs.Focus();
         }
 
-        private bool GeldigGetal(string inpGetal)
+        private double GeldigGetal(TextBox inpTextBox)
         {
             try
             {
-                if (inpGetal != "" )
+                if (inpTextBox.Text != "")
                 {
-                    double invoer = double.Parse(inpGetal);
-                    return true;
+                    double invoer = double.Parse(inpTextBox.Text);
+                    return invoer;
                 }
-                return false;
+                return 0;
             }
             catch (Exception)
             {
                 MessageBox.Show("Geen geldige invoer!");
-                return false;
+                inpTextBox.Text = "";
+                return 0;
+            }
+        }
+
+        private void KeyEventReturn(KeyEventArgs inpE, TextBox inpTextBox)
+        {
+            if (inpE.Key == Key.Return)
+            {
+                inpTextBox.Focus();
+            }
+        }
+
+        private void KeyEventReturn(KeyEventArgs inpE, Button inpButton)
+        {
+            if (inpE.Key == Key.Return)
+            {
+                inpButton.Focus();
             }
         }
 
         private void tbxTotaalprijs_TextChanged(object sender, TextChangedEventArgs e)
         {
-            bool geldigGetal = GeldigGetal(tbxTotaalprijs.Text);
-            if (geldigGetal)
-            {
-                double invoer = double.Parse(tbxTotaalprijs.Text);
-                totaalprijs = invoer;
-            }
-            else
-            {
-                tbxTotaalprijs.Text = "";
-            }            
+            totaalprijs = GeldigGetal(tbxTotaalprijs);
         }
 
         private void tbxTotaalprijs_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Return)
-            {
-                tbxAantal.Focus();
-            }
+            KeyEventReturn(e, tbxAantal);
         }
 
         private void tbxAantal_TextChanged(object sender, TextChangedEventArgs e)
         {
-            bool geldigGetal = GeldigGetal(tbxAantal.Text);
-            if (geldigGetal)
-            {
-                double invoer = double.Parse(tbxAantal.Text);
-                aantal = invoer;
-            }
-            else
-            {
-                tbxAantal.Text = "";
-            }            
+            aantal = GeldigGetal(tbxAantal);
         }
 
         private void tbxAantal_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Return)
-            {
-                tbxKleineKorting.Focus();
-            }            
+            KeyEventReturn(e, tbxKleineKorting);
         }
 
         private void tbxKleineKorting_TextChanged(object sender, TextChangedEventArgs e)
         {
-            bool geldigGetal = GeldigGetal(tbxKleineKorting.Text);
-            if (geldigGetal)
-            {
-                double invoer = double.Parse(tbxKleineKorting.Text);
-                kleineKorting = invoer;
-            }
-            else
-            {
-                tbxKleineKorting.Text = "";
-            }            
+            kleineKorting = GeldigGetal(tbxKleineKorting);
         }
 
         private void tbxKleineKorting_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Return)
-            {
-                tbxGroteKorting.Focus();
-            }
+        {            
+            KeyEventReturn(e, tbxGroteKorting);
         }
 
         private void tbxGroteKorting_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            bool geldigGetal = GeldigGetal(tbxGroteKorting.Text);
-            if (geldigGetal)
-            {
-                double invoer = double.Parse(tbxGroteKorting.Text);
-                groteKorting = invoer;
-            }
-            else
-            {
-                tbxGroteKorting.Text = "";
-            }            
+        {            
+            groteKorting = GeldigGetal(tbxGroteKorting);
         }
 
         private void tbxGroteKorting_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Return)
-            {
-                btnBerekenKorting.Focus();
-            }
+        {            
+            KeyEventReturn(e, btnBerekenKorting);
         }
 
         private void btnBerekenKorting_Click(object sender, RoutedEventArgs e)
@@ -157,7 +126,7 @@ namespace OpdrachtDataEnControlestructuren
 
         private void BerekenKorting()
         {
-            if (totaalprijs != 0 && aantal != 0&& kleineKorting != 0 && groteKorting != 0)
+            if (totaalprijs > 0 && aantal > 0 && kleineKorting > 0 && groteKorting > 0)
             {
                 if (aantal > 5)
                 {
@@ -174,7 +143,11 @@ namespace OpdrachtDataEnControlestructuren
                 {
                     lblGekregenKorting.Content = "U heeft geen korting";
                 }
-            }         
+            }
+            else
+            {
+                lblGekregenKorting.Content = "Gelieve overal een waarde boven nul in te voeren.";
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Oefening3
 {
@@ -17,17 +18,30 @@ namespace Oefening3
     //Voorzie twee constructors, één waar de leden in de constructor aangemaakt worden en één waar je een lijst van leden aan kan meegeven.
     class Team
     {
+        private string TeamNaam { get; set; }
         private Lid Lid1 { get; set; }
         private Lid Lid2 { get; set; }
         private Lid Lid3 { get; set; }
         private Lid Lid4 { get; set; }
 
-        public Team(List<Lid> inpLedenlijst)
+        public Team(string inpTeamNaam, List<Lid> inpLedenlijst)
         {
-            Lid1 = inpLedenlijst[0];
-            Lid2 = inpLedenlijst[1];
-            Lid3 = inpLedenlijst[2];
-            Lid4 = inpLedenlijst[3];            
+            if (inpLedenlijst.Count == 4) 
+            {
+                TeamNaam = inpTeamNaam;
+                Lid1 = inpLedenlijst[0];
+                Lid2 = inpLedenlijst[1];
+                Lid3 = inpLedenlijst[2];
+                Lid4 = inpLedenlijst[3];
+            }
+            else if (inpLedenlijst.Count < 4)
+            {
+                MessageBox.Show("Te weinig leden.");
+            }
+            else if (inpLedenlijst.Count > 4)
+            {
+                MessageBox.Show("Te veel leden.");
+            }
         }
         public Team(Lid inpLid1, Lid inpLid2, Lid inpLid3, Lid inpLid4)
         {
@@ -40,7 +54,9 @@ namespace Oefening3
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.AppendLine("Lid1:");
-            stringBuilder.AppendLine("Lid1:");
+            stringBuilder.AppendLine("Lid2:");
+            stringBuilder.AppendLine("Lid3:");
+            stringBuilder.AppendLine("Lid4:");
         }
     }
 }

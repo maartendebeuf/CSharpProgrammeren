@@ -4,8 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OpdrachtDataEnControlestructuren"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="290.646" Width="414.322">
+        mc:Ignorable="d" Height="287.646" Width="407.322">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="169*"/>
@@ -13,13 +12,13 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="lblTotaalprijs" Content="Totaalprijs" Margin="10,10,6,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right"/>
         <TextBox x:Name="tbxTotaalprijs" Height="23" Margin="5,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF020202" TextChanged="tbxTotaalprijs_TextChanged" KeyDown="tbxTotaalprijs_KeyDown" Grid.Column="1"/>
-        <Label x:Name="lblAantal" Content="Aantal" Margin="10,41,6,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right"/>
+        <Label x:Name="lblAantal" Content="Aantal artikelen" Margin="10,41,6,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Right"/>
         <TextBox x:Name="tbxAantal" Height="23" Margin="5,41,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" TextChanged="tbxAantal_TextChanged" KeyDown="tbxAantal_KeyDown" Grid.Column="1"/>
-        <Button x:Name="btnBerekenKorting" Content="Bereken de korting" Margin="10,134,10,0" VerticalAlignment="Top" IsDefault="True" Click="btnBerekenKorting_Click" Grid.ColumnSpan="2" Height="20"/>
-        <Label x:Name="lblGekregenKorting" Margin="10,159,10,10" FontWeight="Bold" FontStyle="Italic" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblPctKorting2" Content="Kortingspercentage +5 artikelen" VerticalAlignment="Top" Margin="10,103,6,0" Height="26" HorizontalContentAlignment="Right"/>
         <Label x:Name="lblPctKorting1" Content="Kortingspercentage +2 artikelen" VerticalAlignment="Top" Margin="10,72,6,0" Height="26" HorizontalContentAlignment="Right"/>
         <TextBox x:Name="tbxKleineKorting" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Margin="5,72,10,0" TextChanged="tbxKleineKorting_TextChanged" KeyDown="tbxKleineKorting_KeyDown"/>
+        <Label x:Name="lblPctKorting2" Content="Kortingspercentage +5 artikelen" VerticalAlignment="Top" Margin="10,103,6,0" Height="26" HorizontalContentAlignment="Right"/>
         <TextBox x:Name="tbxGroteKorting" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Margin="5,103,10,0" TextChanged="tbxGroteKorting_TextChanged" KeyDown="tbxGroteKorting_KeyDown"/>
+        <Button x:Name="btnBerekenKorting" Content="Bereken de korting" Margin="10,134,10,0" VerticalAlignment="Top" Click="btnBerekenKorting_Click" Grid.ColumnSpan="2" Height="20"/>
+        <Label x:Name="lblGekregenKorting" Margin="10,159,10,10" FontWeight="Bold" FontStyle="Italic" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

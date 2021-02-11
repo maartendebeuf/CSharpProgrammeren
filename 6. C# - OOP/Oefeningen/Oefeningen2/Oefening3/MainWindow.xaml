@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="59*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Margin="10">
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Canvas.Left="148" Canvas.Top="10"/>
+            <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="41" Width="133"/>
+            <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Canvas.Left="148" Canvas.Top="45"/>
+            <Button x:Name="button" Content="Button" Canvas.Left="10" Canvas.Top="80" Width="280"/>
+            <Label x:Name="label" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Canvas.Left="10" Canvas.Top="6"/>
+            <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="284" VerticalAlignment="Top" Width="280" Canvas.Left="10" Canvas.Top="105"/>
+        </Canvas>
+
     </Grid>
 </Window>

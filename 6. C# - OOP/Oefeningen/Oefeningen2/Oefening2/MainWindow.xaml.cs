@@ -62,7 +62,7 @@ namespace Oefening2
                 leerlingen.Add(leerling);
                 dgLeerling_Update();
                 lblLeerlingInfo.Content = leerling.GetLeelingInfo();
-                dgLeerlingen.SelectedCells;
+                dgLeerlingen.SelectedIndex = leerlingen.Count()-1;                
             }
         }
 
