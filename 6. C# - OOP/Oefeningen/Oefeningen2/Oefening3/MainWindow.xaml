@@ -5,20 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Oefening3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="318.5" Width="605.5">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="107"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="Auto" MinWidth="198"/>
         </Grid.ColumnDefinitions>
-        <Canvas Margin="10">
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Canvas.Left="148" Canvas.Top="10"/>
-            <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="41" Width="133"/>
-            <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Canvas.Left="148" Canvas.Top="45"/>
-            <Button x:Name="button" Content="Button" Canvas.Left="10" Canvas.Top="80" Width="280"/>
-            <Label x:Name="label" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Canvas.Left="10" Canvas.Top="6"/>
-            <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="284" VerticalAlignment="Top" Width="280" Canvas.Left="10" Canvas.Top="105"/>
-        </Canvas>
+        <Label x:Name="lblTeamNaam" Content="Teamnaam" Margin="10,10,5,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="lblLidNaam1" Content="Lid 1: Naam" Margin="10,38,5,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="lblLidNaam2" Content="Lid 2: Naam" Margin="10,66,5,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="lblLidNaam3" Content="Lid 3: Naam" Margin="10,94,5,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="lblLidNaam4" Content="Lid 4: Naam" Margin="10,122,5,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="lblLidSpecialiteit1" Content="Specialiteit" Margin="5,38,5,0" VerticalAlignment="Top" Height="26" Grid.Column="2"/>
+        <Label x:Name="lblLidSpecialiteit2" Content="Specialiteit" Margin="5,66,5,0" VerticalAlignment="Top" Height="26" Grid.Column="2"/>
+        <Label x:Name="lblLidSpecialiteit3" Content="Specialiteit" Margin="5,94,5,0" VerticalAlignment="Top" Grid.Column="2" Height="26"/>
+        <Label x:Name="lblLidSpecialiteit4" Content="Specialiteit" Margin="5,122,5,0" VerticalAlignment="Top" Grid.Column="2" Height="26"/>
+        <TextBox x:Name="tbTeamNaam" Height="23" Margin="5,14,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="tbLidNaam1" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="5,42,5,0" Grid.Column="1"/>
+        <TextBox x:Name="tbLidNaam2" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="5,70,5,0" Grid.Column="1"/>
+        <TextBox x:Name="tbLidNaam3" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="5,98,5,0" Grid.Column="1"/>
+        <TextBox x:Name="tbLidNaam4" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="5,126,5,0" Grid.Column="1"/>
+        <TextBox x:Name="tbLidSpecialiteit1" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="5,42,10,0" Grid.Column="3"/>
+        <TextBox x:Name="tbLidSpecialiteit2" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="5,70,10,0" Grid.Column="3"/>
+        <TextBox x:Name="tbLidSpecialiteit3" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="5,98,10,0" Grid.Column="3"/>
+        <TextBox x:Name="tbLidSpecialiteit4" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="5,126,10,0" Grid.Column="3"/>
+        <Button x:Name="btnPrintLid" Content="Print Lid" VerticalAlignment="Top" Grid.Column="2" Margin="5,154,5,0" Height="20"/>
+        <Button x:Name="btnPrintTeam" Content="Print Team" VerticalAlignment="Top" Grid.Column="3" Margin="5,154,10,0" Height="20"/>
+        <DataGrid x:Name="dgTeams" Margin="10,179,5,10" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblPrintLid" Content="Lid:" Grid.Column="2" HorizontalAlignment="Left" Margin="5,179,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblPrintLidInfo" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="5,210,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblPrintTeam" Content="Team" Grid.Column="3" HorizontalAlignment="Left" Margin="5,179,0,0" VerticalAlignment="Top" Width="78" Height="26"/>
+        <Label x:Name="lblPrintTeamInfo" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="5,210,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Button x:Name="btnTeamAanmaken" Content="Maak Team" VerticalAlignment="Top" Margin="10,154,5,0" Height="20" Grid.ColumnSpan="2" Click="btnTeamAanmaken_Click"/>
 
     </Grid>
 </Window>

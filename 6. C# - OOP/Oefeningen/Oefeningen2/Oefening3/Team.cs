@@ -43,6 +43,16 @@ namespace Oefening3
                 MessageBox.Show("Te veel leden.");
             }
         }
+        public Team(string inpTeamNaam, string inpLidNaam1, string inpLidSpecialiteit1
+            , string inpLidNaam2, string inpLidSpecialiteit2
+            , string inpLidNaam3, string inpLidSpecialiteit3
+            , string inpLidNaam4, string inpLidSpecialiteit4)
+        {
+            Lid1 = new Lid(inpLidNaam1, inpLidSpecialiteit1);
+            Lid2 = new Lid(inpLidNaam2, inpLidSpecialiteit2);
+            Lid3 = new Lid(inpLidNaam3, inpLidSpecialiteit3);
+            Lid4 = new Lid(inpLidNaam4, inpLidSpecialiteit4);
+        }
         public Team(Lid inpLid1, Lid inpLid2, Lid inpLid3, Lid inpLid4)
         {
             Lid1 = inpLid1;
