@@ -48,13 +48,15 @@ namespace Oefening3
             , string inpLidNaam3, string inpLidSpecialiteit3
             , string inpLidNaam4, string inpLidSpecialiteit4)
         {
+            TeamNaam = inpTeamNaam;
             Lid1 = new Lid(inpLidNaam1, inpLidSpecialiteit1);
             Lid2 = new Lid(inpLidNaam2, inpLidSpecialiteit2);
             Lid3 = new Lid(inpLidNaam3, inpLidSpecialiteit3);
             Lid4 = new Lid(inpLidNaam4, inpLidSpecialiteit4);
         }
-        public Team(Lid inpLid1, Lid inpLid2, Lid inpLid3, Lid inpLid4)
+        public Team(string inpTeamNaam, Lid inpLid1, Lid inpLid2, Lid inpLid3, Lid inpLid4)
         {
+            TeamNaam = inpTeamNaam;
             Lid1 = inpLid1;
             Lid2 = inpLid2;
             Lid3 = inpLid3;
