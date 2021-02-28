@@ -14,14 +14,17 @@ namespace Oefening2
          */
         public int Faculteit(int startwaarde)
         {
-
-            if (startwaarde == 0)
+            //als startwaarde 1 is dan is de uitkomst 1
+            if (startwaarde <=1)
             {
                 Console.WriteLine("EINDE");
                 return startwaarde;
             }
+            //als startwaarde 2 is dan wordt deze vermenigvuldigd met 2-1 wat 1 zal returnen
+            int waarde = startwaarde * Faculteit(startwaarde-1);
+            //startwaarde aftellen
             startwaarde--;
-            int waarde = Faculteit(startwaarde);
+            Console.WriteLine("RESULTAAT Stap " + startwaarde + " " + waarde);
 
             return waarde;
         }

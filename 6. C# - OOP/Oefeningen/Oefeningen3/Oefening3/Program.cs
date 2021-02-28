@@ -10,6 +10,10 @@ namespace Oefening3
     {
         static void Main(string[] args)
         {
+            Berekening berekening = new Berekening();
+            int uitkomst = berekening.Fibonacci(5);
+            Console.WriteLine(uitkomst);
+            Console.ReadLine();
         }
     }
 }

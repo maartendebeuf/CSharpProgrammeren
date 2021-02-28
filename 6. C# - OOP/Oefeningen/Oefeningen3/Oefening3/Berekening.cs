@@ -11,18 +11,22 @@ namespace Oefening3
         /*
          * ## Oefening 3
          * Schrijf een recursieve methode die de rij van **Fibonacci** weergeeft tot *n* getallen. *n* wordt gevraagd aan de gebruiker.
+         *  1, 1, 2, 3, 5, 8, 13, 21, 34, 55
          */
-        public int Fibonacci(int startwaarde)
+        public int Fibonacci(int aantal)
         {
-
-            if (startwaarde == 0)
-            {
-                Console.WriteLine("EINDE");
-                return startwaarde;
+            int startwaarde = 1;
+            //als aantal 0 is dan is de return 0
+            if (aantal == 0)
+            {                
+                return aantal+1;
             }
-            startwaarde--;
-            int waarde = Fibonacci(startwaarde);
+            int berekening = 0 + startwaarde;
 
+            int fibo = Fibonacci(aantal - 1);
+            int waarde = startwaarde + fibo;
+            Console.WriteLine("RESULTAAT Stap " + aantal + " " + waarde + " " + startwaarde + " " + fibo);
+            aantal--;
             return waarde;
         }
     }

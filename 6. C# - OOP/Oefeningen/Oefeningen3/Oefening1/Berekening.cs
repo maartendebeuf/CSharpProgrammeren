@@ -8,19 +8,21 @@ namespace Oefening1
 {
     class Berekening
     {
-        public int Som(int startwaarde, int aantal)
-        {   
-            
-            if (aantal ==0)
+        //Schrijf een recursieve methode die de som van 1 tot* n* berekent. * n* is een parameter die gevraagd wordt aan de gebruiker.
+        
+        public int Som(int aantal)
+        {            
+            int waarde = 1;
+            //als aantal 0 is dan is de return 1
+            if (aantal == 0)
             {
                 Console.WriteLine("EINDE");
-                return startwaarde;
+                return waarde;
             }
-            int som = startwaarde + startwaarde;
-            aantal--;
-            Console.WriteLine("RESULTAAT Stap " + aantal + " " + som);
-            int resultaat = Som(som, aantal);
-
+            //aantal aftellen
+            aantal--;             
+            int resultaat = waarde+Som(aantal);
+            
             return resultaat;
         }
     }
