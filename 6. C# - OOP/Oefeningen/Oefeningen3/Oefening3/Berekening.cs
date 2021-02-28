@@ -16,6 +16,9 @@ namespace Oefening3
         public int Fibonacci(int aantal)
         {
             int startwaarde = 1;
+            int waarde1 = 1;
+            int waarde2 = 1;
+            int tussenSom = waarde1 + waarde2;
             //als aantal 0 is dan is de return 0
             if (aantal == 0)
             {                

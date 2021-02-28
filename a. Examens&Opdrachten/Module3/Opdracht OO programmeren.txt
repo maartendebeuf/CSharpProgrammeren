@@ -1,0 +1,37 @@
+Opdracht OO programmeren
+Deadline 24042020 2359
+
+Zorg tijdens de volledige opdracht voor correcte foutafhandeling en de daarbij horende meldingen naar de gebruiker toe.
+
+Deel 1 Methodes
+Maak in WPF een programma waarmee je een Belgisch ondernemingsnummer kan controleren.
+Een Belgisch ondernemingsnummer is als volgt opgebouwd BE 0xxx.xxx.xxx waarbij BE de landcode is die standaard gevolgd wordt door een spatie en dan een 0. Wanneer je de volgende 7 cijfers deelt door 97 in een gehele deling, dan is het getal gevormd door de laatste 2 cijfers gelijk aan 97 minus de rest van deze gehele deling.
+Bij een geldig ondernemingsnummer verschijnt de tekst Geldig ondernemingsnummer, bij een ongeldig ondernemingsnummer Ongeldig ondernemingsnummer. Indien het ondernemingsnummer niet is ingegeven volgens de standaardopbouw vermeld in deze tekst, dan verschijnt de tekst Geef het ondernemingsnummer in volgens het juiste formaat.
+Maak gebruik van methodes.
+
+Deel 2 Recursie
+Maak een programma waarmee je de som van alle cijfers in een natuurlijk getal kan berekenen via recursie. Schrijf een methode som(int getal) die via recursie de cijfersom uitvoert. De som van alle getallen wordt berekend door de formule getal % 10 + som(getal  10). De deling door 10 is een natuurlijke deling door 10, wat wil zeggen dat het resultaat van de deling geen kommagetal is (natuurlijk getal). Als de natuurlijke deling door 10 als resultaat 0 geeft, dan is de uitvoering compleet.  
+
+Een voorbeeld
+Ingegeven getal 234
+Oplossing 2 + 3 + 4 = 9
+Uitgeschreven oplossing
+1. 234 % 10 + som(234  10)
+2. 4 + (23 % 10 + som(23  10))
+3. 4 + (3 + som(23  10))
+4. 4 + 3 + (2 % 10 + som(2  10))
+5. 4 + 3 + 2 + som(2  10)
+6. 4 + 3 + 2 + 0 = resultaat som(2  10) is nul, dus stoppen
+7. 9
+
+234 % 10 + ((234  10) % 10) + (((234  10)  10) % 10) = 9
+4 + ((23 % 10) + ((23  10) % 10)) = 9
+4 + 3 + (2 % 10) = 9
+4 + 3 + 2 = 9
+
+Indienen
+
+    Via GitHub plaats hier zeker de link naar het project.
+    Als bijlage op deze opdracht. Upload een .zip of .rar bestand met je volledig (!) project.
+
+Succes!
