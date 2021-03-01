@@ -14,23 +14,21 @@ namespace Oefening3
          *  1, 1, 2, 3, 5, 8, 13, 21, 34, 55
          */
         public int Fibonacci(int aantal)
-        {
-            int startwaarde = 1;
-            int waarde1 = 1;
-            int waarde2 = 1;
-            int tussenSom = waarde1 + waarde2;
+        {                                              
             //als aantal 0 is dan is de return 0
-            if (aantal == 0)
-            {                
-                return aantal+1;
-            }
-            int berekening = 0 + startwaarde;
+            if (aantal <= 1)
+            {    
+                           
+                return 1;
+            }         
+            
+            int waarde1 = Fibonacci(aantal-1);
+            int waarde2 = Fibonacci(aantal-2);
+            int resultaat = waarde1 + waarde2;
 
-            int fibo = Fibonacci(aantal - 1);
-            int waarde = startwaarde + fibo;
-            Console.WriteLine("RESULTAAT Stap " + aantal + " " + waarde + " " + startwaarde + " " + fibo);
-            aantal--;
-            return waarde;
+
+            Console.WriteLine(waarde2);
+            return waarde1 + waarde2;
         }
     }
 }
