@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -31,7 +32,8 @@ namespace Deel1Methodes
         //Maak gebruik van methodes.
 
         public string Resultaat { get; private set; }
-        string testwaarde = "BE 0xxx.xxx.xxx";
+        string testwaarde = "BE 0222.555.666";
+        string testwaarde2 = "BE 0463.788.474";
 
         public MainWindow()
         {
@@ -54,19 +56,30 @@ namespace Deel1Methodes
             }            
         }
 
-        private void ControleerNummer(string ondernemingsnummer)
-        {
-
-        }
-
         private bool ControleFormat(string ondernemingsnummer)
         {
             bool geldigeInput = false;
             if (ondernemingsnummer.Length == 15)
             {
-                string landcode = ondernemingsnummer.Substring(0, 4);
-
+                var regex = new Regex(@"(?:[B][E][ ][0]\d{3}[.]\d{3}[.]\d{3})");
+                bool match = regex.IsMatch(ondernemingsnummer);
+                geldigeInput = true;
             }
+            return geldigeInput;
+        }
+
+        private bool ControleerNummer(string ondernemingsnummer)
+        {
+            bool geldigeInput = false;
+            int waarde1 = int.Parse(ondernemingsnummer.Substring(4, 3) + ondernemingsnummer.Substring(8, 2));
+            int tussenstap1 = waarde1 / 97;
+            int resultaat1 = tussenstap1 % 100;
+
+            int waarde2 = waarde1 % 97;
+            int resultaat2 = 97 - waarde2;
+        
+
+            string landcode = ondernemingsnummer.Substring(0, 4);
             return geldigeInput;
         }
 
