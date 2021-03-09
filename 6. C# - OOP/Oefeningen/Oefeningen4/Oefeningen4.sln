@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefening1", "Oefening1\Oefe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefening2", "Oefening2\Oefening2.csproj", "{62C6D90D-6E81-406E-BE8D-7543CD20BDC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefening3", "Oefening3\Oefening3.csproj", "{32FB4FD3-1C74-4A69-86FA-F0DD8D4DBD11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefening3_Quiz", "Oefening3_Quiz\Oefening3_Quiz.csproj", "{621C14B3-984C-473A-8344-E1CF08107113}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{62C6D90D-6E81-406E-BE8D-7543CD20BDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62C6D90D-6E81-406E-BE8D-7543CD20BDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62C6D90D-6E81-406E-BE8D-7543CD20BDC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32FB4FD3-1C74-4A69-86FA-F0DD8D4DBD11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32FB4FD3-1C74-4A69-86FA-F0DD8D4DBD11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32FB4FD3-1C74-4A69-86FA-F0DD8D4DBD11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32FB4FD3-1C74-4A69-86FA-F0DD8D4DBD11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{621C14B3-984C-473A-8344-E1CF08107113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621C14B3-984C-473A-8344-E1CF08107113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621C14B3-984C-473A-8344-E1CF08107113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621C14B3-984C-473A-8344-E1CF08107113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

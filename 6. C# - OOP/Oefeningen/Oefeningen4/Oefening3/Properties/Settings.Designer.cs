@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Oefeningen2.Properties
+namespace Oefening3.Properties
 {
 
 
