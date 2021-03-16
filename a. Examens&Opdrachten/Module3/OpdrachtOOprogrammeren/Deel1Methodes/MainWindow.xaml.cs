@@ -30,9 +30,7 @@ namespace Deel1Methodes
         //Indien het ondernemingsnummer niet is ingegeven volgens de standaardopbouw vermeld in deze tekst, 
         //dan verschijnt de tekst Geef het ondernemingsnummer in volgens het juiste formaat.
         //Maak gebruik van methodes.
-         
-        
-
+           
         public MainWindow()
         {            
             InitializeComponent();
@@ -41,9 +39,14 @@ namespace Deel1Methodes
 
         private void btnControle_Click(object sender, RoutedEventArgs e)
         {
+            UpdateResultaat();
+        }
+
+        private void UpdateResultaat()
+        {
             string ondernemingsnummer = tbOndernemingsnummer.Text;
-            bool geldigeInput = ControleFormat(ondernemingsnummer);
-            if (geldigeInput)
+            bool geldigFormaat = ControleFormat(ondernemingsnummer);
+            if (geldigFormaat)
             {
                 bool geldigeNummer = ControleerNummer(ondernemingsnummer);
                 if (geldigeNummer)
@@ -58,7 +61,7 @@ namespace Deel1Methodes
             else
             {
                 lblResultaat.Content = "Geef het ondernemingsnummer in \nvolgens het juiste formaat";
-            }            
+            }
         }
 
         private bool ControleFormat(string ondernemingsnummer)
@@ -79,10 +82,10 @@ namespace Deel1Methodes
             int waarde1 = int.Parse(ondernemingsnummer.Substring(4, 3) + ondernemingsnummer.Substring(8, 3) + ondernemingsnummer.Substring(12, 1));
             int waarde2 = int.Parse(ondernemingsnummer.Substring(13, 2));            
             
-            int restwaarde1 = waarde1 % 97;
-            int uitkomst1 = 97 - restwaarde1;
+            int restwaarde = waarde1 % 97;
+            int uitkomst = 97 - restwaarde;
 
-            bool geldigeInput = (waarde2 == uitkomst1);
+            bool geldigeInput = (waarde2 == uitkomst);
 
             return geldigeInput;
         }
