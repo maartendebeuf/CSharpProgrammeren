@@ -5,13 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Deel1Methodes"
         mc:Ignorable="d"
-        Title="Controle ondernemingsnummer" Height="206.25" Width="388.437">
+        Title="Controle ondernemingsnummer" Height="180" Width="380" HorizontalContentAlignment="Center" MaxWidth="380" MaxHeight="180">
     <Grid>
-        <TextBox x:Name="tbOndernemingsnummer" Height="23" Margin="10,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" TextChanged="tbOndernemingsnummer_TextChanged"/>
+        <TextBox x:Name="tbOndernemingsnummer" Height="23" Margin="10,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
         <Button x:Name="btnControle" Content="Controleer" Margin="10,38,10,0" VerticalAlignment="Top" Click="btnControle_Click"/>
-        <Border BorderBrush="Black" BorderThickness="1" Margin="10,63,10,10">
-            <Label x:Name="lblResultaat" Content="" Margin="1,1,1,1" Foreground="{x:Null}" Grid.IsSharedSizeScope="True"/>
-        </Border>
+        <Label x:Name="lblResultaat" Content="" Margin="10,63,10,10" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold" FontStyle="Italic"/>
 
     </Grid>
 </Window>

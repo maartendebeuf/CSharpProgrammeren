@@ -11,7 +11,7 @@ namespace Deel2Recursie
         static void Main(string[] args)
         {
             Recursie recursie = new Recursie();
-            int resultaat = recursie.NatuurlijkGetal(234);
+            int resultaat = recursie.NatuurlijkGetal(23455);
             Console.WriteLine("Waarde: " + resultaat);
             Console.ReadKey();
         }

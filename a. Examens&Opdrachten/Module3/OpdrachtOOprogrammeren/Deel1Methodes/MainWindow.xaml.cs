@@ -30,14 +30,11 @@ namespace Deel1Methodes
         //Indien het ondernemingsnummer niet is ingegeven volgens de standaardopbouw vermeld in deze tekst, 
         //dan verschijnt de tekst Geef het ondernemingsnummer in volgens het juiste formaat.
         //Maak gebruik van methodes.
-
-        public string Resultaat { get; private set; }
-        string testwaarde = "BE 0222.555.666";
-        string testwaarde2 = "BE 0463.788.474";
+         
+        
 
         public MainWindow()
-        {
-            Resultaat = "";
+        {            
             InitializeComponent();
             this.DataContext = this;
         }
@@ -48,21 +45,30 @@ namespace Deel1Methodes
             bool geldigeInput = ControleFormat(ondernemingsnummer);
             if (geldigeInput)
             {
-                ControleerNummer(ondernemingsnummer);
+                bool geldigeNummer = ControleerNummer(ondernemingsnummer);
+                if (geldigeNummer)
+                {
+                    lblResultaat.Content = "Geldig ondernemingsnummer";
+                }
+                else
+                {
+                    lblResultaat.Content = "Ongeldig ondernemingsnummer";
+                }
             }
             else
             {
-                lblResultaat.Content = "Geef het ondernemingsnummer in volgens het juiste formaat";
+                lblResultaat.Content = "Geef het ondernemingsnummer in \nvolgens het juiste formaat";
             }            
         }
 
         private bool ControleFormat(string ondernemingsnummer)
         {
             bool geldigeInput = false;
-            if (ondernemingsnummer.Length == 15)
-            {
-                var regex = new Regex(@"(?:[B][E][ ][0]\d{3}[.]\d{3}[.]\d{3})");
-                bool match = regex.IsMatch(ondernemingsnummer);
+
+            var regex = new Regex(@"(?:^[B][E][ ][0]\d{3}[.]\d{3}[.]\d{3}$)");
+            bool match = regex.IsMatch(ondernemingsnummer);
+            if (match)
+            {                
                 geldigeInput = true;
             }
             return geldigeInput;
@@ -70,26 +76,16 @@ namespace Deel1Methodes
 
         private bool ControleerNummer(string ondernemingsnummer)
         {
-            bool geldigeInput = false;
-            int waarde1 = int.Parse(ondernemingsnummer.Substring(4, 3) + ondernemingsnummer.Substring(8, 2));
-            int tussenstap1 = waarde1 / 97;
-            int resultaat1 = tussenstap1 % 100;
+            int waarde1 = int.Parse(ondernemingsnummer.Substring(4, 3) + ondernemingsnummer.Substring(8, 3) + ondernemingsnummer.Substring(12, 1));
+            int waarde2 = int.Parse(ondernemingsnummer.Substring(13, 2));            
+            
+            int restwaarde1 = waarde1 % 97;
+            int uitkomst1 = 97 - restwaarde1;
 
-            int waarde2 = waarde1 % 97;
-            int resultaat2 = 97 - waarde2;
-        
+            bool geldigeInput = (waarde2 == uitkomst1);
 
-            string landcode = ondernemingsnummer.Substring(0, 4);
             return geldigeInput;
         }
-
-        private void tbOndernemingsnummer_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            string ondernemingsnummer = tbOndernemingsnummer.Text;
-            if (ondernemingsnummer.Length != 7)
-            {
-                Resultaat = "";
-            }            
-        }
+                
     }
 }
