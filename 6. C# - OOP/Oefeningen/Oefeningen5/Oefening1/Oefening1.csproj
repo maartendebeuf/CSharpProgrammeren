@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{158343A7-7366-43A8-81E3-56AF723F80F5}</ProjectGuid>
+    <ProjectGuid>{62C6D90D-6E81-406E-BE8D-7543CD20BDC0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Oefeningen3</RootNamespace>
-    <AssemblyName>Oefeningen3</AssemblyName>
+    <RootNamespace>Oefening2</RootNamespace>
+    <AssemblyName>Oefening2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,6 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Arbeider.cs" />
+    <Compile Include="Bediende.cs" />
+    <Compile Include="Bedrijfswagen.cs" />
+    <Compile Include="Kaderlid.cs" />
+    <Compile Include="Werknemer.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
