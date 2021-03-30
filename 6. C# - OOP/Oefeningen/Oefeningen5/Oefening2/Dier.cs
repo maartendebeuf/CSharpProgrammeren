@@ -11,9 +11,10 @@ namespace Oefening2
     //* het geslacht
     public abstract class Dier
     {
-        public string Naam { get; set; }
-        public int Leeftijd { get; set; }
-        public string Geslacht { get; set; }
+        public string Naam { get; }
+        public int Leeftijd { get; }
+        public string Geslacht { get; }
+        public abstract string Type { get; }
 
         public Dier(string naam, int leeftijd, string geslacht)
         {

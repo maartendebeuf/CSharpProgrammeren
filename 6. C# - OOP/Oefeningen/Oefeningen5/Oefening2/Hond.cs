@@ -9,11 +9,11 @@ namespace Oefening2
 {
     public class Hond : Dier
     {
+        public override string Type { get; } = "Hond";
         private string geluid = "Woef Woef";
         public Hond(string naam, int leeftijd, string geslacht)
             : base( naam,  leeftijd, geslacht)
         {
-
         }
         public override void PrintGeluid()
         {

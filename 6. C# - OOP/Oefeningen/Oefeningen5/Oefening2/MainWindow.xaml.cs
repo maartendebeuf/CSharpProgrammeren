@@ -50,27 +50,129 @@ namespace Oefening2
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<string> Geslacht { get; } = new List<string> { "mannetje", "vrouwtje" };
+        public List<Dier> Dieren { get; set; } = new List<Dier>();
         public MainWindow()
         {
+            this.DataContext = this;
             InitializeComponent();
-            Hond hond = new Hond("Zita", 2, "mannetje");
-            hond.PrintGeluid();
-            Kikker kikker = new Kikker("Kermit", 3, "vrouwtje");
-            kikker.PrintGeluid();
-            Kitten kitten = new Kitten("Felix", 3);
-            kitten.PrintGeluid();
-            Tomcat tomcat = new Tomcat("Simba", 3);
-            tomcat.PrintGeluid();
+            //Hond hond = new Hond("Zita", 2, "mannetje");
+            //hond.PrintGeluid();
+            //Kikker kikker = new Kikker("Kermit", 3, "vrouwtje");
+            //kikker.PrintGeluid();
+            //Kitten kitten = new Kitten("Felix", 3);
+            //kitten.PrintGeluid();
+            //Tomcat tomcat = new Tomcat("Simba", 3);
+            //tomcat.PrintGeluid();
 
         }
 
         private void tbxLeeftijd_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
+            IsIntHandler(sender, e);
+        }
+        private void IsIntHandler(object sender, TextCompositionEventArgs e)
+        {
             TextBox textbox = (TextBox)sender;
             string tekst = textbox.Text;
             string tekstInput = e.Text;
-            string volledigeTekst = tekst + tekstInput
+            string volledigeTekst = tekst + tekstInput;
 
+            bool geldigGetal = int.TryParse(volledigeTekst, out _);
+
+            e.Handled = !geldigGetal;
+        }
+
+        private void btnToevoegen_Click(object sender, RoutedEventArgs e)
+        {
+            bool geldigeInput = GeldigeInput();
+            if (geldigeInput)
+            {
+                string naam = tbxNaam.Text;
+                int leeftijd = int.Parse(tbxLeeftijd.Text);
+                string geslacht = cbGeslacht.Text;
+                if ((bool)rbHond.IsChecked)
+                {
+                    HondToevoegen(naam, leeftijd, geslacht);
+                }
+                else if ((bool)rbKikker.IsChecked)
+                {
+                    KikkerToevoegen(naam, leeftijd, geslacht);
+                }
+                else if ((bool)rbTomcat.IsChecked)
+                {
+                    TomcatToevoegen(naam, leeftijd);
+                }
+                else if ((bool)rbKitten.IsChecked)
+                {
+                    KittenToevoegen(naam, leeftijd);
+                }
+            }
+            dgDieren.Items.Refresh();
+        }
+        private bool GeldigeInput()
+        {            
+            if (!(string.IsNullOrWhiteSpace(tbxNaam.Text)
+                && string.IsNullOrWhiteSpace(tbxNaam.Text)))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
+        }
+
+        private void HondToevoegen(string naam, int leeftijd, string geslacht)
+        {
+            Hond hond = new Hond(naam, leeftijd, geslacht);
+            Dieren.Add(hond as Dier);
+        }
+        private void KikkerToevoegen(string naam, int leeftijd, string geslacht)
+        {
+            Kikker kikker = new Kikker(naam, leeftijd, geslacht);
+            Dieren.Add(kikker);
+        }
+        private void TomcatToevoegen(string naam, int leeftijd)
+        {
+            Tomcat tomcat = new Tomcat(naam, leeftijd);
+            Dieren.Add(tomcat);
+        }
+        private void KittenToevoegen(string naam, int leeftijd)
+        {
+            Kitten kitten = new Kitten(naam, leeftijd);
+            Dieren.Add(kitten);
+        }
+
+        private void rbTomcat_Checked(object sender, RoutedEventArgs e)
+        {
+            cbGeslacht.SelectedItem = "mannetje";
+            cbGeslacht.IsEnabled = false;
+        }
+        private void rbKitten_Checked(object sender, RoutedEventArgs e)
+        {
+            cbGeslacht.SelectedItem = "vrouwtje";
+            cbGeslacht.IsEnabled = false;
+        }
+        private void rbDier_Checked(object sender, RoutedEventArgs e)
+        {
+            cbGeslacht.SelectedIndex = 0;
+            cbGeslacht.IsEnabled = true;
+        }
+
+        private void btnGeluid_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgDieren.SelectedIndex != -1)
+            {
+                Dier dier = (Dier)dgDieren.SelectedItem;
+                dier.PrintGeluid();
+            }
+        }
+
+        private void btnSluit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

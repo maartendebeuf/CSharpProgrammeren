@@ -9,10 +9,10 @@ namespace Oefening2
 {
     public class Kitten : Kat
     {
+        public override string Type { get; } = "Kitten";
         public Kitten(string naam, int leeftijd)
             : base(naam, leeftijd, "vrouwtje")
         {
-
         }
     }
 }

@@ -9,12 +9,12 @@ namespace Oefening2
 {
     public class Kikker : Dier
     {
+        public override string Type { get; } = "Kat";
         private string geluid = "Kwaak";
 
         public Kikker(string naam, int leeftijd, string geslacht)
             : base(naam, leeftijd, geslacht)
         {
-
         }
         public override void PrintGeluid()
         {
