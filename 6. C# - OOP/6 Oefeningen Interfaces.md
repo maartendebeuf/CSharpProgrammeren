@@ -6,12 +6,15 @@ Definieer een interface `IPerson` met eigenschappen voor Naam en Leeftijd. Defin
 
 ## Oefening 2
 
-Gebruik de code van de vorige oefening om een interface `IIdentifiable` te maken met een eigenschap string `Id` en een interface `IBirthable` met een eigenschap DateTime `Geboortedatum` en deze te implementeren in onze `Inwoner` klasse . Herschrijf de constructor met die nieuwe parameters.
+//Gebruik de code van de vorige oefening om een interface `IIdentifiable` te maken met een eigenschap string `Id` 
+//en een interface `IBirthable` met een eigenschap DateTime `Geboortedatum` en 
+//deze te implementeren in onze `Inwoner` klasse . Herschrijf de constructor met die nieuwe parameters.
 
 ## Oefening 3
 
-Het is de bedoeling dat je simpele telefoonsoftware schrijft, maak hiervoor gebruik van interfaces. Momenteel bevat je project één klasse: `Smartphone`. Dit type heeft de volgende functionaliteit: bellen en surfen op het web.\
-Voorzie één klasse en twee interfaces die bovenstaande functionaliteit implementeren.
+//Het is de bedoeling dat je simpele telefoonsoftware schrijft, maak hiervoor gebruik van interfaces. 
+//Momenteel bevat je project één klasse: `Smartphone`. /Dit type heeft de volgende functionaliteit: bellen en surfen op het web.\
+//Voorzie één klasse en twee interfaces die bovenstaande functionaliteit implementeren.
 
 ### Input
 
