@@ -14,7 +14,7 @@ namespace Oefeningen1
             AantalGebruikers++;
         }
 
-        public static int AantalGebruikers { get; set; }
+        public static int AantalGebruikers { get; private set; }
         
         public string Voornaam { get; set; }
         public string Naam { get; set; }
