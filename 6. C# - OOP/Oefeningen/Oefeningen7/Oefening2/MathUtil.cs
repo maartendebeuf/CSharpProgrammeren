@@ -12,7 +12,7 @@ namespace Oefening2
     * Delen(teDelenGetal, deelGetal)
     * Percentage(getal, percentageGetal)
     */
-    class MathUtil
+    public static class MathUtil
     {
         public static double Plus(double eersteGetal, double tweedeGetal)
         {
@@ -32,7 +32,7 @@ namespace Oefening2
         }
         public static double Percentage(double getal, double percentageGetal)
         {
-            return (getal / percentageGetal)*100;
+            return getal * (percentageGetal/100);
         }
     }
 }
