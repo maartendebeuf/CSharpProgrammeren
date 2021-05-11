@@ -14,7 +14,7 @@ namespace Oefening3
     //* `T Min()`\
     //Retourneer het eerste element
     class Program
-    {
+    {        
         static void Main(string[] args)
         {
             MijnGenericLijst<string> mijnGenericLijstString = new MijnGenericLijst<string>();
@@ -51,29 +51,11 @@ namespace Oefening3
             Console.WriteLine( mijnGenericLijstInt.Last());
             Console.WriteLine(mijnGenericLijstInt.First());
 
-            MijnLijst mijnLijstString = new MijnLijst();
-            mijnLijstString.List.Add(3);
-            Console.WriteLine(mijnLijstString.ToString());
-            mijnLijstString.List.Add("tweede");
-            Console.WriteLine(mijnLijstString.ToString());
-            mijnLijstString.List.Add("derde");
-            Console.WriteLine(mijnLijstString.ToString());
-            mijnLijstString.List.Add("vierde");
-            Console.WriteLine(mijnLijstString.ToString());
-            mijnLijstString.Add("vijfde");
-            Console.WriteLine(mijnLijstString.ToString());
-            mijnLijstString.Remove(2);
-            Console.WriteLine(mijnLijstString.ToString());
-            Console.WriteLine(mijnLijstString.Contains("derde"));
-            Console.WriteLine(mijnLijstString.Last());
-            Console.WriteLine(mijnLijstString.First());
-
             MijnLijst mijnLijst = new MijnLijst();
-            RunMijnLijst(1, "twee", 3, "vier", 5);
+            RunMijnLijst(mijnLijst, 1, "twee", 3, "vier", 5);
         }
-        public static void RunMijnLijst(object o1, object o2, object o3, object o4, object o5)
+        public static void RunMijnLijst(MijnLijst mijnLijst, object o1, object o2, object o3, object o4, object o5)
         {
-            MijnLijst mijnLijst = new MijnLijst();
             mijnLijst.List.Add(o1);
             Console.WriteLine(mijnLijst.ToString());
             mijnLijst.List.Add(o2);
