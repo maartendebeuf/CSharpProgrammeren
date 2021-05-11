@@ -24,6 +24,11 @@ namespace Oefening2
             var indexLijst = indexes.Split(" ");
             App app = new App();
             var outLijst = app.Input(waardeLijst2, int.Parse(indexLijst[0]), int.Parse(indexLijst[1]));
+            foreach(var t in outLijst)
+            {
+                Console.WriteLine(t);
+            }
+            Console.ReadLine();
         }
     }
 }

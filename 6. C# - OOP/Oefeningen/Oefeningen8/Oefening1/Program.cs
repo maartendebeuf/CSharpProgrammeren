@@ -25,6 +25,8 @@ namespace Oefening1
             Box2 box21 = new Box2();
             box21.Input("string");
             Console.WriteLine(box21.ToString());
+            box21.Input(1);
+            Console.WriteLine(box21.ToString());
 
         }
     }
