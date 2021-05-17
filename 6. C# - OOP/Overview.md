@@ -131,3 +131,25 @@ public abstract Class Klasse
     * *Bewaren van gegevens op een static klasse kan gevaarlijk zijn!*
 * Een klasse hoeft niet static te zijn om static members te hebben
 * Er bestaat enkel één kopie van een static member
+### - Generics
+* generics laten je toe om een klasse, interface of methode te schrijven die kan werken met eender welk datatype
+* Herkenbaar aan <*Kan gelijk welk letter/woord zijn*> in een klasse/type of methode
+
+```csharp
+// T wordt hier dus het specifieke type T, gekozen bij declaratie/initialisatie
+public class WaardeEnBeschrijving<T>
+{    
+    public T Waarde { get; set; }
+    public string Beschrijving { get; set; }
+    public WaardeEnBeschrijving(T waarde, string beschrijving)
+    {
+        Waarde = waarde;
+        Beschrijving = beschrijving;
+    }
+    // Dit is een generieke methode met generieke parameter P.    
+    public P ReturnWaardeVanType<P>(P waarde)
+    {
+        return waarde;
+    }
+}
+```
