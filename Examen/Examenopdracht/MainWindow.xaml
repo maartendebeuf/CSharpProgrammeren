@@ -1,0 +1,97 @@
+﻿<Window x:Class="Examenopdracht.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Examenopdracht"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="502.669" Width="905.749">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!-- COMPUTERS LIJST -->
+        <Label Grid.Column="0" Grid.Row="0" Content="Computers" FontWeight="Bold"/>
+        <DataGrid ItemsSource="{Binding ComputerLijst}" SelectedItem="{Binding GeselecteerdeComputer}" Grid.Column="0" Grid.Row="1" />
+        <!-- COMPUTERS DATA -->
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Command="{Binding CmdNieuweComputer}" Margin="5" Padding="2">Nieuwe computer</Button>
+            </StackPanel>
+
+            <Label Grid.Column="0" Grid.Row="1" Content="Type"></Label>
+            <TextBox Text="{Binding Type}" Grid.Column="1" Grid.Row="1"></TextBox>
+            <Label Grid.Column="0" Grid.Row="2" Content="Computernaam"></Label>
+            <TextBox Text="{Binding UniekeComputernaam}" Grid.Column="1" Grid.Row="2"></TextBox>
+            <Label Grid.Column="0" Grid.Row="3" Content="Bouwjaar"></Label>
+            <TextBox Text="{Binding Bouwjaar}" Grid.Column="1" Grid.Row="3"></TextBox>
+            <Label Grid.Column="0" Grid.Row="4" Content="Leeftijd"></Label>
+            <Label Grid.Column="1" Grid.Row="4" Content="{Binding ComputerLeeftijd}"></Label>
+            <Label Grid.Column="0" Grid.Row="5" Content="Aankoopprijs"></Label>
+            <TextBox Text="{Binding Aankoopprijs}" Grid.Column="1" Grid.Row="5"></TextBox>
+
+            <StackPanel Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Command="{Binding CmdBewaarComputer}" Margin="5" Padding="2">Bewaar computer</Button>
+                <Button Command="{Binding CmdVerwijderComputer}" Margin="5" Padding="2">Verwijder computer</Button>
+                <Button Command="{Binding CmdPrint}" Margin="5" Padding="2">Print</Button>
+            </StackPanel>
+        </Grid>
+
+        <!-- SOFTWARE LIJST -->
+        <Label Grid.Column="0" Grid.Row="2" Content="Gekoppelde software" FontWeight="Bold"/>
+        <DataGrid Grid.Column="0" Grid.Row="3" />
+        <!-- SOFTWARE DATA -->
+        <Grid Grid.Column="1" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!-- AANMAKEN SOFTWARE -->
+            <Label Grid.Column="0" Grid.Row="0" Content="Type software"></Label>
+            <ComboBox Grid.Column="1" Grid.Row="0" ItemsSource="{Binding Software}" SelectedItem="{Binding GeselecteerdeSoftware}"></ComboBox>
+            <Label Grid.Column="0" Grid.Row="1" Content="Softwarenaam"></Label>
+            <TextBox Grid.Column="1" Grid.Row="1" IsReadOnly="True"></TextBox>
+            <Label Grid.Column="0" Grid.Row="2" Content="Licentienummer"></Label>
+            <TextBox Grid.Column="1" Grid.Row="2"></TextBox>
+            <Label Grid.Column="0" Grid.Row="3" Content="Uitgavejaar"></Label>
+            <TextBox Grid.Column="1" Grid.Row="3"></TextBox>
+            <Label Grid.Column="0" Grid.Row="4" Content="Standaard lettertype"></Label>
+            <TextBox Grid.Column="1" Grid.Row="4" IsEnabled="{Binding IsStandaardLettertypeAanpasbaar}"></TextBox>
+            <!-- KNOPPEN SOFTWARE -->
+            <StackPanel Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Margin="5" Padding="2">Toevoegen</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
