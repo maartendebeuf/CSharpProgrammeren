@@ -1,0 +1,8 @@
+2022-09-19 20:14:13:020 - sting contains letter f
+2022-09-19 20:16:47:907 - sting contains number
+2022-09-19 20:16:59:163 - sting contains letter f
+2022-09-19 20:17:29:361 - string has more than 50 chracters
+2022-09-19 20:18:33:059 - string has more than 50 chracters
+2022-09-19 20:18:56:987 - string has more than 50 chracters
+2022-09-19 20:18:59:944 - string has more than 50 chracters
+2022-09-19 20:19:32:681 - string has more than 50 characters
