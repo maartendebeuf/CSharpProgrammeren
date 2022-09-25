@@ -1,0 +1,29 @@
+﻿<Window x:Class="OefeningenLes3_3Door.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OefeningenLes3_3Door"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnOpenDoor" Content="Open door" Margin="5,5,5,5" Click="btnOpenDoor_Click"/>
+        <Button x:Name="btnCloseDoor" Content="Close door" Margin="5,5,5,5" Grid.Column="1" Click="btnCloseDoor_Click"/>
+        <Button x:Name="btnUnlockDoor" Content="Unlock door" Margin="5,5,5,5" Grid.Row="1" Click="btnUnlockDoor_Click"/>
+        <Button x:Name="btnLockDoor" Content="Lock door" Margin="5,5,5,5" Grid.Row="1" Grid.Column="1" Click="btnLockDoor_Click"/>
+        <Label x:Name="lblDoorOpen" Grid.Column="2" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <Label x:Name="lblDoorLocked" Grid.Column="2" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Grid.Row="1"/>
+        <Label x:Name="lblMessage" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Grid.Row="3"/>
+
+    </Grid>
+</Window>
