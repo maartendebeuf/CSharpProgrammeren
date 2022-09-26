@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OefeningenLes4_1", "OefeningenLes4_1\OefeningenLes4_1.csproj", "{6F8AFF52-5A97-41C6-87A5-C89AF081E814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningenLes4_2", "OefeningenLes4_2\OefeningenLes4_2.csproj", "{FFFF1E16-8A4B-4E0A-9CA3-C06FC0C01FAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OefeningenLes4_2", "OefeningenLes4_2\OefeningenLes4_2.csproj", "{FFFF1E16-8A4B-4E0A-9CA3-C06FC0C01FAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningenLes4_5", "OefeningenLes4_5\OefeningenLes4_5.csproj", "{B9BA4B96-1041-4082-A879-8C24F113E539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FFFF1E16-8A4B-4E0A-9CA3-C06FC0C01FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFFF1E16-8A4B-4E0A-9CA3-C06FC0C01FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFFF1E16-8A4B-4E0A-9CA3-C06FC0C01FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9BA4B96-1041-4082-A879-8C24F113E539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9BA4B96-1041-4082-A879-8C24F113E539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9BA4B96-1041-4082-A879-8C24F113E539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9BA4B96-1041-4082-A879-8C24F113E539}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

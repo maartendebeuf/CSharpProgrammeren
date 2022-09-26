@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SyntraWestAdvancedDotNetLINQClassExample1
+namespace OefeningenLes5_3
 {
-    public enum EnumPeriod
+    internal class Apple: Phone
     {
-        Day,
-        Evening
     }
 }
