@@ -30,29 +30,35 @@ products.Add(new Product() { ID = 9, Weight = 2.4, BoxID = 1 });
 products.Add(new Product() { ID = 10, Weight = 1.5, BoxID = 2 });
 
 
-boxes.Add(new Box() { ID = 1, TareWeight = 2.0, Size = "L" });
-boxes.Add(new Box() { ID = 2, TareWeight = 1.2, Size = "S" });
-boxes.Add(new Box() { ID = 3, TareWeight = 5.2, Size = "M" });
-boxes.Add(new Box() { ID = 4, TareWeight = 2.6, Size = "L" });
-boxes.Add(new Box() { ID = 5, TareWeight = 6, Size = "XS" });
-boxes.Add(new Box() { ID = 6, TareWeight = 1.9, Size = "XS" });
-boxes.Add(new Box() { ID = 7, TareWeight = 3.5, Size = "L" });
+boxes.Add(new Box() { ID = 1, TareWeight = 2.0, Size = "L", PalletID = 1});
+boxes.Add(new Box() { ID = 2, TareWeight = 1.2, Size = "S", PalletID = 3 });
+boxes.Add(new Box() { ID = 3, TareWeight = 5.2, Size = "M", PalletID = 5 });
+boxes.Add(new Box() { ID = 4, TareWeight = 2.6, Size = "L", PalletID = 1 });
+boxes.Add(new Box() { ID = 5, TareWeight = 6, Size = "XS", PalletID = 2 });
+boxes.Add(new Box() { ID = 6, TareWeight = 1.9, Size = "XS", PalletID = 3 });
+boxes.Add(new Box() { ID = 7, TareWeight = 3.5, Size = "L", PalletID = 5 });
 
 
-pallets.Add(new Pallet() { ID = 1, TareWeight = 10, Name = "One" });
-pallets.Add(new Pallet() { ID = 2, TareWeight = 11, Name = "Two" });
-pallets.Add(new Pallet() { ID = 3, TareWeight = 15, Name = "Three" });
-pallets.Add(new Pallet() { ID = 4, TareWeight = 18, Name = "Four" });
-pallets.Add(new Pallet() { ID = 5, TareWeight = 25, Name = "Five" });
-pallets.Add(new Pallet() { ID = 6, TareWeight = 30, Name = "Six" });
-pallets.Add(new Pallet() { ID = 7, TareWeight = 25, Name = "seven" });
+pallets.Add(new Pallet() { ID = 1, TareWeight = 10, Name = "One", Type = "Standaard" });
+pallets.Add(new Pallet() { ID = 2, TareWeight = 11, Name = "Two", Type = "Half" });
+pallets.Add(new Pallet() { ID = 3, TareWeight = 15, Name = "Three", Type = "Standaard" });
+pallets.Add(new Pallet() { ID = 4, TareWeight = 18, Name = "Four", Type = "Standaard" });
+pallets.Add(new Pallet() { ID = 5, TareWeight = 25, Name = "Five", Type = "Double" });
+pallets.Add(new Pallet() { ID = 6, TareWeight = 30, Name = "Six", Type = "Double" });
+pallets.Add(new Pallet() { ID = 7, TareWeight = 25, Name = "seven", Type = "Half" });
 #endregion
 
 //    ○ selecteer alle producten met hun gewicht, het doos gewicht en het pallet gewicht
 //var allProducts = from pallet in pallets
-//                  join box in boxes on  
+//                  join box in boxes on pallet.ID equals box.PalletID
+//                  join product in products on box.ID equals product.BoxID
+var allProducts = from product in products
+                  join box in boxes on product.BoxID equals box.ID
+                  join pallet in pallets on box.PalletID equals pallet.ID
+                  select $"{product.ID}: {product.Weight} is in box {box.ID}: {box.TareWeight}{}"
 
-var allproducts2 = products.Join(pallets, x => x.)
+
+//var allproducts2 = products.Join(pallets, x => x.)
 
 //    ○ selecteer alle producten die op een pallet staan van het type 'standaard'
 //    ○ Bereken het totale gewicht per doos (Box)

@@ -13,5 +13,6 @@ namespace OefeningenLes4_5
         public int ID { get; set; }
         public double TareWeight { get; set; }
         public string Size { get; set; }
+        public int PalletID { get; set; }
     }
 }
