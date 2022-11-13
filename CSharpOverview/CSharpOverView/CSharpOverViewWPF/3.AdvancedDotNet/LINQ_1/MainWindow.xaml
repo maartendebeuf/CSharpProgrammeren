@@ -1,0 +1,32 @@
+﻿<Window x:Class="CSharpOverViewWPF._3.AdvancedDotNet.LINQ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpOverViewWPF._3.AdvancedDotNet.LINQ"
+        mc:Ignorable="d"
+       Title="MainWindow" Height="450" Width="800">
+    <Grid Background="DarkGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label FontSize="40" FontWeight="Bold">Hello world!</Label>
+        <StackPanel Margin="5" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
+            <Button FontSize="40" Click="Button1_Click">Join data 1</Button>
+            <Button FontSize="40" Click="Button2_Click">Join data 2</Button>
+            <Button FontSize="40" Click="Button3_Click">Join data 3</Button>
+            <Button FontSize="40" Click="Button4_Click">Join data 4</Button>
+        </StackPanel>
+        <Label Grid.Row="1" FontSize="20" Grid.Column="1">Unfiltered list:</Label>
+        <ListBox Name="UnfilteredList" Margin="0,30,0,0" Grid.Row="1" Grid.Column="1"></ListBox>
+        <Label Grid.Row="2" FontSize="20" Grid.Column="1">Filtered list:</Label>
+        <ListBox Name="FilteredList" Margin="0,30,0,0" Grid.Row="2" Grid.Column="1"></ListBox>
+    </Grid>
+</Window>
