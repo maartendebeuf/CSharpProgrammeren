@@ -1,0 +1,26 @@
+[
+    {
+      "naam": "arts A",
+      "adres": "Mijnstraat 123",
+      "Expertise": "Katachtigen",
+      "Gemeente": "KORTRIJK"
+    },
+    {
+      "naam": "arts B",
+      "adres": "Mijnstraat 123",
+      "Gemeente": "MENEN",
+      "Expertise": "Reptielen"
+    },
+    {
+      "naam": "arts C",
+      "adres": "Mijnstraat 123",
+      "Gemeente": "GENT",
+      "Expertise": "Katachtigen"
+    },
+  {
+    "naam": "arts D",
+    "adres": "Mijnstraat 123",
+    "Gemeente": "GENT",
+    "Expertise": "Wilde dieren"
+  }
+  ]
