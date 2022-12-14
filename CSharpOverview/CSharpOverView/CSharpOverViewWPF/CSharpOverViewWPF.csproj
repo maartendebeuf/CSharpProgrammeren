@@ -74,6 +74,7 @@
     <Compile Include="1.Basics\GoodToKnow\Dictionary.cs" />
     <Compile Include="1.Basics\GoodToKnow\Enum.cs" />
     <Compile Include="1.Basics\GoodToKnow\Not_null.cs" />
+    <Compile Include="1.Basics\GoodToKnow\Regexexample.cs" />
     <Compile Include="1.Basics\GoodToKnow\Shortcuts.cs" />
     <Compile Include="1.Basics\GoodToKnow\Switch.cs" />
     <Compile Include="3.AdvancedDotNet\Async\Form1.cs">
@@ -152,6 +153,7 @@
   <ItemGroup>
     <Folder Include="2.DatabaseBasics\" />
     <Folder Include="4.Architecture\CiCd\UnitTesting\" />
+    <Folder Include="4.Architecture\MVC\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmzettingLogic", "OmzettingLogic\OmzettingLogic.csproj", "{923FD4F1-1FF2-44BB-95DF-6406F000E7D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmzettingLogicTests", "OmzettingLogicTests\OmzettingLogicTests.csproj", "{82AC304F-154B-48EB-805C-E766AE7F4ACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{923FD4F1-1FF2-44BB-95DF-6406F000E7D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{923FD4F1-1FF2-44BB-95DF-6406F000E7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{923FD4F1-1FF2-44BB-95DF-6406F000E7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{923FD4F1-1FF2-44BB-95DF-6406F000E7D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82AC304F-154B-48EB-805C-E766AE7F4ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82AC304F-154B-48EB-805C-E766AE7F4ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82AC304F-154B-48EB-805C-E766AE7F4ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82AC304F-154B-48EB-805C-E766AE7F4ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1451CF2A-FC5D-4BEA-B631-485F2A7A1541}
+	EndGlobalSection
+EndGlobal

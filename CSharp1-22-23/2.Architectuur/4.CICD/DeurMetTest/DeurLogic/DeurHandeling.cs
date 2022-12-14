@@ -18,7 +18,6 @@ namespace DeurLogic
             try
             {
                 hexTokenId = Convert.ToInt32(tokenId, 16);
-
                 var tokenrepo = TokenRepo.GetTokens();
                 foreach (var token in tokenrepo)
                 {

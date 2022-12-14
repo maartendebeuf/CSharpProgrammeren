@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM1", "MVVM1\MVVM1.csproj", "{59079C70-2134-461F-9972-0A1733DB0BDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM2", "MVVM2\MVVM2.csproj", "{94A2AF0F-5288-4B1F-A678-B9C80311DF7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59079C70-2134-461F-9972-0A1733DB0BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59079C70-2134-461F-9972-0A1733DB0BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59079C70-2134-461F-9972-0A1733DB0BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59079C70-2134-461F-9972-0A1733DB0BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94A2AF0F-5288-4B1F-A678-B9C80311DF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94A2AF0F-5288-4B1F-A678-B9C80311DF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94A2AF0F-5288-4B1F-A678-B9C80311DF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94A2AF0F-5288-4B1F-A678-B9C80311DF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9445FDE-36E7-42E1-A0FE-D95B6FD79CCE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MVC_Klas.Models.Dier>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Benaming)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Familie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gevaarlijk)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Benaming)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gevaarlijk)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { benaming = item.Benaming }) |
+                @Html.ActionLink("Details", "Details", new {  benaming=item.Benaming }) |
+                @Html.ActionLink("Delete", "Delete", new { benaming = item.Benaming })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

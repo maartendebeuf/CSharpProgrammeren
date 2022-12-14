@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MVC_Klas.Models.Dierenarts>
+
+@{
+    ViewData["Title"] = "Overzicht dierenartsen";
+    ViewData["ExtraCSS"] = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css";
+}
+
+<h1>Overzicht dierenartsen</h1>
+<div class="row">
+<div class="card-columns">
+    @foreach (var item in Model)
+    {
+        <div class="card bg-warning" style="height: 300px;width:250px; margin: 15px;">
+            <div class="card-img" style="text-align: center">
+                <i class="fa-solid fa-user fa-4x" ></i>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Naam)</h5>
+            <p class="card-text">
+                    @Html.DisplayFor(modelItem => item.Gemeente)
+                    <br>
+                        @Html.ActionLink("Meer info", "Details", new {  id=item.Naam  }, new { @class = "btn-primary" })
+                        <br><br>
+
+                        <button class="btn btn-primary" onclick="location.href='@Url.Action("Details", "Dierenarts")'">
+                            Meer info
+                        </button>
+            </p>
+           
+            </div>
+        </div>
+    }
+</div>
+</div>
+

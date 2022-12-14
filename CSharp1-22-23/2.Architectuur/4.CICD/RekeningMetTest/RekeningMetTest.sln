@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rekening", "RekeningMetTest\Rekening.csproj", "{0E4A3B8F-6479-4D2A-8FED-E0A47CC88057}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RekeningTests", "RekeningTests\RekeningTests.csproj", "{9715A3B8-80AB-4230-A9F0-9F1B29A4204E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E4A3B8F-6479-4D2A-8FED-E0A47CC88057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E4A3B8F-6479-4D2A-8FED-E0A47CC88057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E4A3B8F-6479-4D2A-8FED-E0A47CC88057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E4A3B8F-6479-4D2A-8FED-E0A47CC88057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9715A3B8-80AB-4230-A9F0-9F1B29A4204E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9715A3B8-80AB-4230-A9F0-9F1B29A4204E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9715A3B8-80AB-4230-A9F0-9F1B29A4204E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9715A3B8-80AB-4230-A9F0-9F1B29A4204E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F1314B2-34B1-48EA-BF03-FD856CE1F577}
+	EndGlobalSection
+EndGlobal
