@@ -9,17 +9,17 @@ namespace CSharpOverViewWPF._1.Basics.Snippets
     internal class Snippets
     {
         //sorteren van class
-        #region Private Constants
+        #region "Private Constants"
         #endregion
-        #region Private fields
+        #region "Private Variables"
         #endregion
-        #region Constructors
+        #region "Constructors"
         #endregion
-        #region Private Methods
+        #region "Private Methods"
         #endregion
-        #region Public Methods
+        #region "Public Methods"
         #endregion
-        #region Properties
+        #region "Properties"
         #endregion
     }
 }
