@@ -47,6 +47,7 @@ namespace MVVM2.ViewModels
 
         private bool CanAddUser()
         {
+            //bv als er een geldige user is ingegeven
             return true;
             //throw new NotImplementedException();
         }

@@ -77,6 +77,7 @@
     <Compile Include="1.Basics\GoodToKnow\Regexexample.cs" />
     <Compile Include="1.Basics\GoodToKnow\Shortcuts.cs" />
     <Compile Include="1.Basics\GoodToKnow\Switch.cs" />
+    <Compile Include="1.Basics\Snippets\Snippets.cs" />
     <Compile Include="3.AdvancedDotNet\Async\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

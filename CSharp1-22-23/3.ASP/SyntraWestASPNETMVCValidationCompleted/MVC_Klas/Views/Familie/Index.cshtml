@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MVC_Klas.Models.Familie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Orde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Klasse)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Orde)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Klasse)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { naam = item.Naam }) |
+                    @Html.ActionLink("Details", "Details", new {  naam = item.Naam }) |
+                    @Html.ActionLink("Delete", "Delete", new { naam = item.Naam })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
