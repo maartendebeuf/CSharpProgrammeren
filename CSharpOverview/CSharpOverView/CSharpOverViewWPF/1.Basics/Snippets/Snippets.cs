@@ -15,11 +15,11 @@ namespace CSharpOverViewWPF._1.Basics.Snippets
         #endregion
         #region "Constructors"
         #endregion
+        #region "Properties"
+        #endregion
         #region "Private Methods"
         #endregion
         #region "Public Methods"
-        #endregion
-        #region "Properties"
         #endregion
     }
 }
