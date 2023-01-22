@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@inject IOptions<RequestLocalizationOptions> LocalizationOptions
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = new List<SelectListItem>()
+    {
+        new SelectListItem() { Value = "nl", Text = "Nederlands" },
+        new SelectListItem() { Value = "en", Text = "English" },
+        new SelectListItem() { Value = "fr", Text = "Français" },
+    };
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path)
+        ? "~/"
+        : $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
+
+    var test = "";
+    if (string.IsNullOrEmpty(Context.Request.Path))
+    {
+        test = "~/";
+    }
+    else
+    {
+        test = $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
+    }
+}
+<div>
+    <form asp-controller="
+" asp-action="SetCulture" asp-route-returnUrl="@returnUrl"
+          class="form-horizontal nav-link text-dark">
+        <select name="culture"
+                onchange="this.form.submit();"
+                asp-for="@requestCulture.RequestCulture.Culture.Name"
+                asp-items="cultureItems">
+        </select>
+    </form>
+
+    <scrip
+</div>
