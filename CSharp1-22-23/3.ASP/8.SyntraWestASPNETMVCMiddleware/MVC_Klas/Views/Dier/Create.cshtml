@@ -20,11 +20,11 @@
             <div class="form-group">
                 <label asp-for="FamilieID" class="control-label"></label>
                 @*<input asp-for="Familie" class="form-control" />*@
-                <select asp-for="FamilieID" class="form-control" asp-items="@ViewBag.Families"></select>
-                <span asp-validation-for="FamilieID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AantalPoten" class="control-label"></label>
+                <select asp-for="FamilieID" class="form-control" asp-items="@ViewBag.Families"></select> @*select voor dropdown*@ @*zie herhaling om manueel waardes toe te voegen als het niet automatisch lukt*@
+                <span asp-validation-for="FamilieID" class="text-danger"></span> @*voor vertaling zie Herhaling*@
+            </div>                                                                      @*waar zit de jsonResult geïmplementeerd*@
+            <div class="form-group">                                                    @*bovenstaande met onchange in herhalingsoefening *@
+                <label asp-for="AantalPoten" class="control-label"></label>             
                 <input asp-for="AantalPoten" class="form-control" />
                 <span asp-validation-for="AantalPoten" class="text-danger"></span>
             </div>
@@ -45,5 +45,6 @@
 </div>
 
 @section Scripts {
+    @*Best undefined gebruiken ipv null in Html sripts*@  @*$.ajax call zie herhaling @ create patiënt*@ @*#voor Bithdate is voor id op te zoeken(. is voor Class?) in herhalingsoefening*@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+}               @*zie showerror in herhaling voor errormelding van ajaxCall*@

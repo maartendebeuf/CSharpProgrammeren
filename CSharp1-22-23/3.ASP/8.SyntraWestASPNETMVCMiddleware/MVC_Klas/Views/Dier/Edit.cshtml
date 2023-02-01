@@ -1,5 +1,5 @@
 ﻿@model MVC_Klas.Models.Dier
-
+@*hier moet de Localiser geïnjecteerd worden om vertaling van bv enum toe te voegen. In tegenstelling tot models die via data annotations vertaald worden ZIE HERHALING*@
 @{
     ViewData["Title"] = "Edit";
 }
@@ -14,8 +14,8 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Benaming" class="control-label"></label>
-                <input asp-for="Benaming" class="form-control" />
-                <span asp-validation-for="Benaming" class="text-danger"></span>
+                <input asp-for="Benaming" class="form-control" />                       @*kan Readonly of hidden*@
+                <span asp-validation-for="Benaming" class="text-danger"></span>         @*als readonly kan de validatie weg*@
             </div>
             <div class="form-group">
                 <label asp-for="Familie" class="control-label"></label>

@@ -19,12 +19,12 @@ var configBuilder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentD
 var config = configBuilder.Build();
 builder.Services.AddDbContext<KlasContext>(options => options.UseSqlServer(config.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddLocalization(options => options.ResourcesPath = "Localization");
+builder.Services.AddLocalization(options => options.ResourcesPath = "Localization");//Vertaler, tool=??
 
 // Add services to the container.
 builder.Services.AddControllersWithViews()
-                .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.SubFolder)
-                .AddDataAnnotationsLocalization();
+                .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.SubFolder)//bepaalt dat er met folders gewerkt wordt. via file kan ook, maar dan moet volledige Namespaces met punten gescheiden in filenaam
+                .AddDataAnnotationsLocalization();                                                               //resx moet embedded zijn in properties anders wordt deze niet meegeladen(allisins voor via html ipv via models , niet zeker van models)       
 
 // Add logging
 builder.Services.AddHttpLogging(logging =>
@@ -94,10 +94,11 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
-app.UseRequestLocalization(options =>
+app.UseRequestLocalization(options =>//vertaler
 {
     options.DefaultRequestCulture = new RequestCulture("nl");
     options.SupportedCultures = new List<CultureInfo> { new CultureInfo("nl"), new CultureInfo("en"), new CultureInfo("fr") };
+    //Laatste options van in PowerPoint moet er niet bij, geeft aan dat er moet gezocht worden in de hij zit er al default.
 });
 
 

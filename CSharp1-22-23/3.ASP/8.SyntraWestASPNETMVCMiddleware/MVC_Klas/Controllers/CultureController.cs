@@ -15,10 +15,10 @@ namespace MVC_Klas.Controllers
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddDays(30) }
             );
 
-                    Response.Cookies.Append(
-                    "cookie",
-                    culture,
-            new CookieOptions { Expires = DateTimeOffset.UtcNow.AddDays(30) }
+                    Response.Cookies.Append(                                    // hoeft niet denk ik
+                    "cookie",                                                   // hoeft niet denk ik
+                    culture,                                                    // hoeft niet denk ik
+            new CookieOptions { Expires = DateTimeOffset.UtcNow.AddDays(30) }   // hoeft niet denk ik
         );
 
             return LocalRedirect(returnUrl);

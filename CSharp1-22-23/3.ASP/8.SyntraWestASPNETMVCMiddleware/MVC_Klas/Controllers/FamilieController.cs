@@ -86,7 +86,7 @@ namespace MVC_Klas.Controllers
 
             return View(x);
         }
-
+                                    
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Familie familie)//returnt een nieuw object, als er een property niet is weergegeven in de form gaat deze field een standaard waarde meegeven(anders da noriginele object,

@@ -14,8 +14,9 @@ namespace MVC_Klas.Models
         //[StringLength(40, ErrorMessage = "Het aantal karakters moet tussen 1 en 40 liggen", MinimumLength = 1)] 
         [ForeignKey("Familie")]
         public int FamilieID { get; set; }
-        [DisplayName("Leg count")]
-        [Range(1, 1000, ErrorMessage = "{0} must be between 1 and 1000")]
+        [DisplayName("Leg count")]  // wordt gebruikt voor vertaling
+        [Range(1, 1000, ErrorMessage = "{0} must be between 1 and 1000")]// erromessage  // wordt gebruikt voor vertaling 
+                                                        // zie herhaling voor Validation met regex (NationalsecurityNumber)
         public int AantalPoten { get; set; }
         public Familie Familie { get; set; }
         [Column("GevaarlijkNaam")]

@@ -31,7 +31,7 @@ namespace MVC_Klas.Controllers
             return View(_dierRepo.GetAll());
         }
 
-        public JsonResult GetAnimals()
+        public JsonResult GetAnimals()//jsonrtesult te te controleren via postman app
         {
             return Json(_dierRepo.GetAll());
         }
@@ -51,7 +51,7 @@ namespace MVC_Klas.Controllers
         }
 
         // POST: DierController/Create
-        [HttpPost]
+        [HttpPost]                                                                  //HttpPost is voor de return van de view(als er op de button wordt geklikt
         [ValidateAntiForgeryToken]
         public ActionResult Create(Dier dier)
         {
@@ -59,7 +59,7 @@ namespace MVC_Klas.Controllers
             {
                 ModelState.Remove("Familie");
 
-                if (ModelState.IsValid)
+                if (ModelState.IsValid)//extra check op de DataAnnotations van Model in backend
                 {
                     Dier x = dier;
                     var result = _dierRepo.AddDier(x);
@@ -69,7 +69,7 @@ namespace MVC_Klas.Controllers
                     }
                     else
                     {
-                        ViewBag.Families = _familieRepo.GetAll().Select(e => new SelectListItem() { Text = e.Naam, Value = e.ID.ToString() });
+                        ViewBag.Families = _familieRepo.GetAll().Select(e => new SelectListItem() { Text = e.Naam, Value = e.ID.ToString() });//selectlistItem voor List van dropdownmenu(MVC) op te vullen
                         ModelState.AddModelError("Benaming", "Naam van dier is reeds in gebruik!");
                         return View(dier);
                     }
@@ -121,9 +121,9 @@ namespace MVC_Klas.Controllers
         }
 
         // GET: DierController/Delete/5
-        public ActionResult Delete(string benaming)
-        {
-            return View(_dierRepo.GetByBenaming(benaming));
+        public ActionResult Delete(string benaming)             //kan ook direct via button met redirect voor herladen van pagina vb in herhaling
+        {                                                       //mapping van models in departmentService vb in herhaling
+            return View(_dierRepo.GetByBenaming(benaming));     //vb met include in departmentRepo vb in herhaling
         }
 
         // POST: DierController/Delete/5

@@ -8,13 +8,23 @@ namespace CSharpOverView.Shortcuts
 {
     internal class Shortcuts
     {
-        public int MyProperty1 { get; set; }//*** _"prop"_**
+        //*** _"prop"_**
+        public int MyProperty1 { get; set; }
 
-        private int myVar;//*** _"propfull"_**
+
+        //*** _"propfull"_**
+        private int myVar;
         public int MyProperty
         {
             get { return myVar; }
             set { myVar = value; }
         }
+
+
+        //ctrl+k, ctrl+s
+        #region MyRegion
+
+
+        #endregion
     }
 }

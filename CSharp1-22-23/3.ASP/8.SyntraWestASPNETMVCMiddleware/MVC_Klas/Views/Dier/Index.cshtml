@@ -29,7 +29,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Benaming)
+                @Html.DisplayNameFor(model => model.Benaming)        @*vb van lijst toevoegen in details in herhaling*@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Familie)
@@ -53,7 +53,7 @@
                 @Html.DisplayFor(modelItem => item.Gevaarlijk)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { benaming = item.Benaming }) |
+                @Html.ActionLink("Edit", "Edit", new { benaming = item.Benaming }) |   @*Uit comment halen en (best ID) meegeven naar nieuwe view*@
                 @Html.ActionLink("Details", "Details", new {  benaming = item.Benaming }) |
                 @Html.ActionLink("Delete", "Delete", new { benaming = item.Benaming })
             </td>
