@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApiSender", "RestApiSender\RestApiSender.csproj", "{6935537A-C425-451E-8AD9-72E2447A1988}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6935537A-C425-451E-8AD9-72E2447A1988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6935537A-C425-451E-8AD9-72E2447A1988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6935537A-C425-451E-8AD9-72E2447A1988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6935537A-C425-451E-8AD9-72E2447A1988}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65490591-BBB9-4999-A940-EBCC0D894EE4}
+	EndGlobalSection
+EndGlobal
